@@ -1,4 +1,4 @@
-# cashh [![npm version](https://badge.fury.io/js/cashh.svg)](https://www.npmjs.com/package/cashh) <img src="http://benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30"> [![Join Discord](https://img.shields.io/badge/chat-discord-7289DA.svg)](https://discord.gg/5vkWGvY)
+# cashh [![npm version](https://badge.fury.io/js/cashh.svg)](https://www.npmjs.com/package/cashh) [![Join Discord](https://img.shields.io/badge/chat-discord-7289DA.svg)](https://discord.gg/5vkWGvY)
 
 Exchange Currency Rates directly from your Terminal! 
 

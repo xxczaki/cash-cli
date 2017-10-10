@@ -14,7 +14,7 @@ Exchange Currency Rates directly from your Terminal!
 
 ## Install
 
-### :package: NPM<br>![](https://badge.fury.io/js/material_calculator.svg)
+### :package: NPM<br>![](https://badge.fury.io/js/cashh.svg)
 
 ```
 npm install -g cashh

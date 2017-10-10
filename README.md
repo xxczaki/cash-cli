@@ -21,13 +21,19 @@ npm install -g cashh
 ## Usage
 
 ```
-cashh <number> <currency code>
+cashh <amount> <currency code>
 ```
 
 for example:
 
 ```
 cashh 1 usd
+```
+
+or
+
+```
+cashh 1 usd eur rub pln
 ```
 
 ## Available Currencies:

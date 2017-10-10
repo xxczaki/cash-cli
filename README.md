@@ -42,6 +42,17 @@ cashh 1 usd eur rub pln
 
 See [currencies.json](https://github.com/xxczaki/cashh/blob/master/lib/currencies.json) file.
 
+# NPM Dependencies
+
+- [colors](https://www.npmjs.com/package/colors)
+- [got](https://www.npmjs.com/package/got)
+- [money](https://www.npmjs.com/package/money)
+- [ora](https://www.npmjs.com/package/ora)
+
+# NPM Dev Dependencies
+
+- [standard](https://www.npmjs.com/package/standard)
+
 ## My other Projects
 
 - [akepinski.me](https://github.com/xxczaki/akepinski.me): Simple "About Me" Static Website Theme.

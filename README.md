@@ -14,6 +14,8 @@ Exchange Currency Rates directly from your Terminal!
 
 ## Install
 
+**[Click here for more detailed installation guide](https://github.com/xxczaki/cashh/wiki/Installation)**
+
 ### :package: NPM<br>![](https://badge.fury.io/js/cashh.svg)
 
 ```

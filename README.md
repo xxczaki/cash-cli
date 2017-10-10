@@ -1,6 +1,6 @@
 # cashh [![npm version](https://badge.fury.io/js/cashh.svg)](https://www.npmjs.com/package/cashh) [![Build Status](https://travis-ci.org/xxczaki/cashh.svg?branch=master)](https://travis-ci.org/xxczaki/cashh) [![Join Discord](https://img.shields.io/badge/chat-discord-7289DA.svg)](https://discord.gg/5vkWGvY)
 
-Exchange Currency Rates directly from your Terminal! 
+Convert Currency Rates directly from your Terminal! 
 
 *More Information Coming Soon!*
 

@@ -55,6 +55,8 @@ See [currencies.json](https://github.com/xxczaki/cashh/blob/master/lib/currencie
 
 - [standard](https://www.npmjs.com/package/standard)
 
+## Dependencies Status: [![Known Vulnerabilities](https://snyk.io/test/github/xxczaki/cashh/badge.svg)](https://snyk.io/test/github/xxczaki/cashh)
+
 ## My other Projects
 
 - [akepinski.me](https://github.com/xxczaki/akepinski.me): Simple "About Me" Static Website Theme.

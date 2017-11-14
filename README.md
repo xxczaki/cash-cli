@@ -40,22 +40,17 @@ or
 cashh 1 usd eur rub pln
 ```
 
-## Available Currencies:
+# Available Currencies:
 
 See [currencies.json](https://github.com/xxczaki/cashh/blob/master/lib/currencies.json) file.
 
-# NPM Dependencies
+# NPM Dependencies [![Known Vulnerabilities](https://snyk.io/test/github/xxczaki/cashh/badge.svg)](https://snyk.io/test/github/xxczaki/cashh)
 
 - [colors](https://www.npmjs.com/package/colors)
 - [got](https://www.npmjs.com/package/got)
 - [money](https://www.npmjs.com/package/money)
 - [ora](https://www.npmjs.com/package/ora)
-
-# NPM Dev Dependencies
-
 - [standard](https://www.npmjs.com/package/standard)
-
-## Dependencies Status: [![Known Vulnerabilities](https://snyk.io/test/github/xxczaki/cashh/badge.svg)](https://snyk.io/test/github/xxczaki/cashh)
 
 ## My other Projects
 

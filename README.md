@@ -25,19 +25,19 @@ npm install -g cash-cli
 ## Usage
 
 ```
-cashh <amount> <currency code>
+cash <amount> <currency code>
 ```
 
 for example:
 
 ```
-cashh 1 usd
+cash 1 usd
 ```
 
 or
 
 ```
-cashh 1 usd eur rub pln
+cash 1 usd eur rub pln
 ```
 
 # Available Currencies:

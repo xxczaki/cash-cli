@@ -1,4 +1,4 @@
-# cash-cli [![npm version](https://badge.fury.io/js/cashh.svg)](https://www.npmjs.com/package/cashh) [![Build Status](https://travis-ci.org/xxczaki/cash-cli.svg?branch=master)](https://travis-ci.org/xxczaki/cash-cli) ![David](https://david-dm.org/xxczaki/cash-cli.svg)
+# cash-cli [![npm version](https://badge.fury.io/js/cash-cli.svg)](https://www.npmjs.com/package/cash-cli) [![Build Status](https://travis-ci.org/xxczaki/cash-cli.svg?branch=master)](https://travis-ci.org/xxczaki/cash-cli) ![David](https://david-dm.org/xxczaki/cash-cli.svg)
 
 Convert Currency Rates directly from your Terminal! 
 
@@ -16,7 +16,7 @@ Convert Currency Rates directly from your Terminal!
 
 **[Click here for more detailed installation guide](https://github.com/xxczaki/cash-cli/wiki/Installation)**
 
-### :package: NPM<br>![](https://badge.fury.io/js/cashh.svg)
+### :package: NPM<br>![](https://badge.fury.io/js/cash-cli.svg)
 
 ```
 npm install -g cash-cli

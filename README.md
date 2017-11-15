@@ -2,8 +2,6 @@
 
 Convert Currency Rates directly from your Terminal! 
 
-*More Information Coming Soon!*
-
 ## Features
 
 - Simple

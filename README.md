@@ -1,4 +1,4 @@
-# cashh [![npm version](https://badge.fury.io/js/cashh.svg)](https://www.npmjs.com/package/cashh) [![Build Status](https://travis-ci.org/xxczaki/cashh.svg?branch=master)](https://travis-ci.org/xxczaki/cashh) ![David](https://david-dm.org/xxczaki/cashh.svg)
+# cash-cli [![npm version](https://badge.fury.io/js/cashh.svg)](https://www.npmjs.com/package/cashh) [![Build Status](https://travis-ci.org/xxczaki/cash-cli.svg?branch=master)](https://travis-ci.org/xxczaki/cash-cli) ![David](https://david-dm.org/xxczaki/cash-cli.svg)
 
 Convert Currency Rates directly from your Terminal! 
 
@@ -14,12 +14,12 @@ Convert Currency Rates directly from your Terminal!
 
 ## Install
 
-**[Click here for more detailed installation guide](https://github.com/xxczaki/cashh/wiki/Installation)**
+**[Click here for more detailed installation guide](https://github.com/xxczaki/cash-cli/wiki/Installation)**
 
 ### :package: NPM<br>![](https://badge.fury.io/js/cashh.svg)
 
 ```
-npm install -g cashh
+npm install -g cash-cli
 ```
 
 ## Usage
@@ -42,9 +42,9 @@ cashh 1 usd eur rub pln
 
 # Available Currencies:
 
-See [currencies.json](https://github.com/xxczaki/cashh/blob/master/lib/currencies.json) file.
+See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/currencies.json) file.
 
-# NPM Dependencies [![Known Vulnerabilities](https://snyk.io/test/github/xxczaki/cashh/badge.svg)](https://snyk.io/test/github/xxczaki/cashh)
+# NPM Dependencies [![Known Vulnerabilities](https://snyk.io/test/github/xxczaki/cash-cli/badge.svg)](https://snyk.io/test/github/xxczaki/cash-cli)
 
 - [colors](https://www.npmjs.com/package/colors)
 - [got](https://www.npmjs.com/package/got)

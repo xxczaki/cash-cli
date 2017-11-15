@@ -1,4 +1,4 @@
-# cash-cli [![npm version](https://badge.fury.io/js/cash-cli.svg)](https://www.npmjs.com/package/cash-cli) [![Build Status](https://travis-ci.org/xxczaki/cash-cli.svg?branch=master)](https://travis-ci.org/xxczaki/cash-cli) ![David](https://david-dm.org/xxczaki/cash-cli.svg)
+# cash-cli [![npm version](https://badge.fury.io/js/cash-cli.svg)](https://www.npmjs.com/package/cash-cli) [![Build Status](https://travis-ci.org/xxczaki/cash-cli.svg?branch=master)](https://travis-ci.org/xxczaki/cash-cli) ![David](https://david-dm.org/xxczaki/cash-cli.svg) [![codecov](https://codecov.io/gh/xxczaki/cash-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/xxczaki/cash-cli)
 
 Convert Currency Rates directly from your Terminal! 
 

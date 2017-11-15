@@ -1,6 +1,5 @@
 const got = require('got')
 const money = require('money')
-const colors = require('colors')
 const chalk = require('chalk')
 const ora = require('ora')
 const currencies = require('../lib/currencies.json')

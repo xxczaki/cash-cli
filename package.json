@@ -1,6 +1,6 @@
 {
-  "name": "cashh",
-  "version": "0.2.0",
+  "name": "cash-cli",
+  "version": "0.9.0",
   "description": "Exchange Rates Online using your terminal!",
   "author": {
     "name": "Anthony Kepinski",
@@ -21,7 +21,7 @@
     "cashh": "./bin/index.js"
   },
   "keywords": [
-    "cashh",
+    "cli",
     "currency",
     "exchange",
     "rates",

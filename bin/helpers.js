@@ -20,17 +20,17 @@ const version = () => {
 const help = () => {
   console.log(`
   Usage
-    $ cashh <amount> <currency> [<...currencies>]
+    $ cash <amount> <currency> [<...currencies>]
 
   Some currency
     [ usd, eur, gbp, brl... ]
 
   Examples
-    $ cashh 1 usd
+    $ cash 1 usd
 
     or
 
-    $ cashh 1 usd eur rub aud
+    $ cash 1 usd eur rub aud
   `)
   process.exit(1)
 }

@@ -1,4 +1,5 @@
 const pkg = require('../package.json')
+const chalk = require('chalk')
 
 const helpers = (argv) => {
   // version
@@ -18,20 +19,21 @@ const version = () => {
 }
 
 const help = () => {
-  console.log(`
-  Usage
-    $ cash <amount> <currency> [<...currencies>]
+  console.log(chalk.yellow(`
+  Usage:
 
-  Some currency
-    [ usd, eur, gbp, brl... ]
+    $ cash <amount> <currency>
 
-  Examples
+  Some currencies: usd, pln, rub, aud, chf, eur
+
+  Examples:
+
     $ cash 1 usd
 
     or
 
-    $ cash 1 usd eur rub aud
-  `)
+    $ cash 1 usd eur pln aud
+  `))
   process.exit(1)
 }
 

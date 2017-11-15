@@ -1,11 +1,12 @@
 const got = require('got')
 const money = require('money')
 const colors = require('colors')
+const chalk = require('chalk')
 const ora = require('ora')
 const currencies = require('../lib/currencies.json')
 const API = 'https://api.fixer.io/latest'
 
-const cash = (command) => {
+const cashh = (command) => {
   let amount = command['amount']
   let from = command['from'].toUpperCase()
   let to = command['to'].filter((item) => item !== from).map((item) => item.toUpperCase())
@@ -29,24 +30,24 @@ const cash = (command) => {
 
     to.map((item) => {
       if (currencies[item]) {
-        loading.succeed(`${colors.green(money.convert(amount, { from: from, to: item }).toFixed(2))} ${`(${item})`.gray} ${currencies[item].italic}`)
+        loading.succeed(`${chalk.green(money.convert(amount, { from: from, to: item }).toFixed(2))} ${`(${item})`.gray} ${currencies[item].italic}`)
       } else {
-        loading.warn(`${colors.yellow(` The ${item} currency not found`)}`)
+        loading.warn(`${chalk.yellow(` The ${item} currency not found`)}`)
       }
     })
 
     console.log()
-    console.log(colors.italic.gray(` Conversion of ${from.bold} ${amount.bold}`))
+    console.log(chalk.underline.gray(` Conversion of ${from.bold} ${amount.bold}`))
     process.exit(1)
   }).catch((error) => {
     if (error.code === 'ENOTFOUND') {
-      loading.fail(colors.red('   Please check your internet connection.\n'))
+      loading.fail(chalk.red('   Please check your internet connection.\n'))
     } else {
-      loading.fail(colors.red('   Internal server error... \n'))
+      loading.fail(chalk.red('   Internal server error... \n'))
     }
 
     process.exit(1)
   })
 }
 
-module.exports = cash
+module.exports = cashh

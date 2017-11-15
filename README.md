@@ -1,20 +1,15 @@
-# cash-cli [![npm version](https://badge.fury.io/js/cash-cli.svg)](https://www.npmjs.com/package/cash-cli) [![Build Status](https://travis-ci.org/xxczaki/cash-cli.svg?branch=master)](https://travis-ci.org/xxczaki/cash-cli) ![David](https://david-dm.org/xxczaki/cash-cli.svg)
+<p align="center">
+  <img src="https://github.com/xxczaki/cash-cli/blob/master/logo.png" height="64">
+  <h3 align="center">cash-cli</h3>
+  <p align="center">Convert Currency Rates directly from your Terminal!<p>
+  <p align="center"><a href="https://www.npmjs.com/package/cash-cli"><img src="https://badge.fury.io/js/cash-cli.svg" alt="npm Package"></a> <a href="https://travis-ci.org/xxczaki/cash-cli"><img src="https://travis-ci.org/xxczaki/cash-cli.svg?branch=master" alt="Build Status"></a> <a href="https://github.com/xxczaki/cash-cli"><img src="https://david-dm.org/xxczaki/cash-cli.svg" alt="David"></a></p>
+</p>
 
-Convert Currency Rates directly from your Terminal! 
-
-## Features
-
-- Simple
-- 100 % free & open-source
-- Easy to install
-- Clean Code
-- Calculating fast using [fixer.io](http://fixer.io/)
-
-## Install
+## Installation
 
 **[Click here for more detailed installation guide!](https://github.com/xxczaki/cash-cli/wiki/Installation)**
 
-### :package: NPM<br>![](https://badge.fury.io/js/cash-cli.svg)
+### :package: npm<br>![](https://badge.fury.io/js/cash-cli.svg)
 
 ```
 npm install -g cash-cli
@@ -35,29 +30,22 @@ cash 1 usd
 or
 
 ```
-cash 1 usd eur rub pln
+cash 10 usd eur rub pln
 ```
 
-# Available Currencies:
+## Available Currencies:
 
 See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/currencies.json) file.
 
 # NPM Dependencies [![Known Vulnerabilities](https://snyk.io/test/github/xxczaki/cash-cli/badge.svg)](https://snyk.io/test/github/xxczaki/cash-cli)
 
 - [colors](https://www.npmjs.com/package/colors)
+- [chalk](https://www.npmjs.com/package/chalk)
 - [got](https://www.npmjs.com/package/got)
 - [money](https://www.npmjs.com/package/money)
 - [ora](https://www.npmjs.com/package/ora)
 - [standard](https://www.npmjs.com/package/standard)
 
-## My other Projects
-
-- [akepinski.me](https://github.com/xxczaki/akepinski.me): Simple "About Me" Static Website Theme.
-- [Logger](https://github.com/xxczaki/logger): Secure & Simple Windows Keylogger written in C#.
-- [Calculator.JS](https://github.com/xxczaki/calculator.js): Web Calulator using Google Material Design.
-
 ## License
 
-[MIT](https://opensource.org/licenses/MIT)
-
-[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+[MIT](https://opensource.org/licenses/MIT) © Anthony Kepinski

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/xxczaki/cash-cli/blob/master/logo.png" height="64">
+  <img src="https://i.imgur.com/ddhPSQ4.png" height="64">
   <h3 align="center">cash-cli</h3>
   <p align="center">Convert Currency Rates directly from your Terminal!<p>
   <p align="center"><a href="https://www.npmjs.com/package/cash-cli"><img src="https://badge.fury.io/js/cash-cli.svg" alt="npm Package"></a> <a href="https://travis-ci.org/xxczaki/cash-cli"><img src="https://travis-ci.org/xxczaki/cash-cli.svg?branch=master" alt="Build Status"></a> <a href="https://github.com/xxczaki/cash-cli"><img src="https://david-dm.org/xxczaki/cash-cli.svg" alt="David"></a></p>
@@ -39,7 +39,6 @@ See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/curren
 
 ## npm Dependencies [![Known Vulnerabilities](https://snyk.io/test/github/xxczaki/cash-cli/badge.svg)](https://snyk.io/test/github/xxczaki/cash-cli)
 
-- [colors](https://www.npmjs.com/package/colors)
 - [chalk](https://www.npmjs.com/package/chalk)
 - [got](https://www.npmjs.com/package/got)
 - [money](https://www.npmjs.com/package/money)

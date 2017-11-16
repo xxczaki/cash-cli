@@ -2,7 +2,6 @@ const got = require('got')
 const money = require('money')
 const chalk = require('chalk')
 const ora = require('ora')
-const colors = require('colors')
 const currencies = require('../lib/currencies.json')
 const API = 'https://api.fixer.io/latest'
 
@@ -30,14 +29,14 @@ const cashh = (command) => {
 
     to.map((item) => {
       if (currencies[item]) {
-        loading.succeed(`${chalk.green(money.convert(amount, { from: from, to: item }).toFixed(2))} ${`(${item})`.gray} ${currencies[item].italic}`)
+        loading.succeed(`${chalk.green(money.convert(amount, { from: from, to: item }).toFixed(2))} ${`(${item})`} ${currencies[item]}`)
       } else {
         loading.warn(`${chalk.yellow(` The ${item} currency not found`)}`)
       }
     })
 
     console.log()
-    console.log(chalk.underline.gray(` Conversion of ${from.bold} ${amount.bold}`))
+    console.log(chalk.underline.gray(` Conversion of ${chalk.bold(from)} ${chalk.bold(amount)}`))
     process.exit(1)
   }).catch((error) => {
     if (error.code === 'ENOTFOUND') {

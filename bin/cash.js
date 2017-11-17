@@ -31,7 +31,7 @@ const cashh = (command) => {
       if (currencies[item]) {
         loading.succeed(`${chalk.green(money.convert(amount, { from: from, to: item }).toFixed(2))} ${`(${item})`} ${currencies[item]}`)
       } else {
-        loading.warn(`${chalk.yellow(` The ${item} currency not found`)}`)
+        loading.warn(`${chalk.yellow(` The ${item} currency not found `)}`)
       }
     })
 

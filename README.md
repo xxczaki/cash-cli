@@ -43,7 +43,7 @@ See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/curren
 - [got](https://www.npmjs.com/package/got)
 - [money](https://www.npmjs.com/package/money)
 - [ora](https://www.npmjs.com/package/ora)
-- [xo](https://www.npmjs.com/package/xo)
+- [standard](https://www.npmjs.com/package/standard)
 
 ## Thanks:
 

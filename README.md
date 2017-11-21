@@ -2,7 +2,7 @@
   <img src="https://i.imgur.com/ddhPSQ4.png" height="64">
   <h3 align="center">cash-cli</h3>
   <p align="center">Convert Currency Rates directly from your Terminal!<p>
-  <p align="center"><a href="https://www.npmjs.com/package/cash-cli"><img src="https://badge.fury.io/js/cash-cli.svg" alt="npm Package"></a> <a href="https://travis-ci.org/xxczaki/cash-cli"><img src="https://travis-ci.org/xxczaki/cash-cli.svg?branch=master" alt="Build Status"></a> <img src="https://circleci.com/gh/xxczaki/cash-cli.svg?style=svg" alt="Build Status"></a> <a href="https://github.com/xxczaki/cash-cli"><img src="https://david-dm.org/xxczaki/cash-cli.svg" alt="David"></a></p>
+  <p align="center"><a href="https://www.npmjs.com/package/cash-cli"><img src="https://badge.fury.io/js/cash-cli.svg" alt="npm Package"></a> <a href="https://travis-ci.org/xxczaki/cash-cli"><img src="https://travis-ci.org/xxczaki/cash-cli.svg?branch=master" alt="Build Status"></a> <a href="https://github.com/xxczaki/cash-cli"><img src="https://david-dm.org/xxczaki/cash-cli.svg" alt="David"></a></p>
 </p>
 
 ## Installation
@@ -53,3 +53,5 @@ See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/curren
 ## License
 
 [MIT](https://opensource.org/licenses/MIT) © Anthony Kepinski
+
+`[![Build Status](https://travis-ci.org/xxczaki/cash-cli.svg?branch=master)](https://travis-ci.org/xxczaki/cash-cli) [![CircleCI](https://circleci.com/gh/xxczaki/cash-cli.svg?style=svg)](https://circleci.com/gh/xxczaki/cash-cli)`

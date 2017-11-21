@@ -54,4 +54,4 @@ See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/curren
 
 [MIT](https://opensource.org/licenses/MIT) © Anthony Kepinski
 
-`[![Build Status](https://travis-ci.org/xxczaki/cash-cli.svg?branch=master)](https://travis-ci.org/xxczaki/cash-cli) [![CircleCI](https://circleci.com/gh/xxczaki/cash-cli.svg?style=svg)](https://circleci.com/gh/xxczaki/cash-cli)`
+[![Build Status](https://travis-ci.org/xxczaki/cash-cli.svg?branch=master)](https://travis-ci.org/xxczaki/cash-cli) [![CircleCI](https://circleci.com/gh/xxczaki/cash-cli.svg?style=svg)](https://circleci.com/gh/xxczaki/cash-cli)

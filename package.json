@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "1.4.4",
+	"version": "1.4.5",
 	"description": "Exchange Rates Online using your terminal!",
 	"author": {
 		"name": "Anthony Kepinski",

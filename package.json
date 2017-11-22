@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "1.4.3",
+	"version": "1.4.4",
 	"description": "Exchange Rates Online using your terminal!",
 	"author": {
 		"name": "Anthony Kepinski",
@@ -15,8 +15,7 @@
 	"homepage": "https://github.com/xxczaki/cash-cli",
 	"main": "index.js",
 	"scripts": {
-		"test": "xo",
-		"coveralls": "coveralls"
+		"test": "xo"
 	},
 	"xo": {
 		"rules": {
@@ -42,7 +41,6 @@
 		"ora": "^1.3.0"
 	},
 	"devDependencies": {
-		"coveralls": "^3.0.0",
 		"xo": "^0.18.2"
 	}
 }

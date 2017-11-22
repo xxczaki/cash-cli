@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "1.3.7",
+	"version": "1.3.8",
 	"description": "Exchange Rates Online using your terminal!",
 	"author": {
 		"name": "Anthony Kepinski",
@@ -18,8 +18,12 @@
 		"test": "xo && ava"
 	},
 	"xo": {
+		"ignores": [
+      "bin/cash.js"
+],
    "rules": {
-     "unicorn/no-process-exit": 0
+     "unicorn/no-process-exit": 0,
+		 "unicorn/explicit-length-check": 0
    }
 	},
 	"bin": {

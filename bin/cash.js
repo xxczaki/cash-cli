@@ -28,7 +28,7 @@ const cashh = command => {
 		money.base = response.body.base;
 		money.rates = response.body.rates;
 
-		to.map(item => {
+		to.forEach(item => {
 			if (currencies[item]) {
 				loading.succeed(`${chalk.green(money.convert(amount, {from, to: item}).toFixed(2))} ${`(${item})`} ${currencies[item]}`);
 			} else {

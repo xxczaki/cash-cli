@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "1.4.1",
+	"version": "1.4.2",
 	"description": "Exchange Rates Online using your terminal!",
 	"author": {
 		"name": "Anthony Kepinski",
@@ -18,10 +18,10 @@
 		"test": "xo"
 	},
 	"xo": {
-   "rules": {
-     "unicorn/no-process-exit": 0,
-		 "unicorn/explicit-length-check": 0
-   }
+		"rules": {
+			"unicorn/no-process-exit": 0,
+			"unicorn/explicit-length-check": 0
+		}
 	},
 	"bin": {
 		"cash": "./bin/index.js"
@@ -41,6 +41,7 @@
 		"ora": "^1.3.0"
 	},
 	"devDependencies": {
+		"coveralls": "^3.0.0",
 		"xo": "^0.18.2"
 	}
 }

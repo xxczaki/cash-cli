@@ -7,7 +7,7 @@
 
 ## Installation
 
-**[Click here for more detailed installation guide](https://github.com/xxczaki/cash-cli/wiki/1.-Installation)**
+**[Click here for more detailed installation guide!](https://github.com/xxczaki/cash-cli/wiki/1.-Installation)**
 
 ### :package: npm<br>![](https://badge.fury.io/js/cash-cli.svg)
 

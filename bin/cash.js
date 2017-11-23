@@ -1,14 +1,10 @@
 const got = require('got');
 const money = require('money');
 const chalk = require('chalk');
-const updateNotifier = require('update-notifier');
-const pkg = require('./package.json');
 const ora = require('ora');
 const currencies = require('../lib/currencies.json');
 
 const API = 'https://api.fixer.io/latest';
-
-updateNotifier({pkg}).notify();
 
 const cashh = command => {
 	const amount = command.amount;

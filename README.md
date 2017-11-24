@@ -5,7 +5,7 @@
   <p align="center"><a href="https://www.npmjs.com/package/cash-cli"><img src="https://badge.fury.io/js/cash-cli.svg" alt="npm Package"></a>  <a href="https://travis-ci.org/xxczaki/cash-cli"><img src="https://travis-ci.org/xxczaki/cash-cli.svg?branch=master" alt="Build Status"></a>  <a href="https://circleci.com/gh/xxczaki/cash-cli/"><img src="https://circleci.com/gh/xxczaki/cash-cli.svg?style=svg" alt="Build Status"></a>  <a href="https://npmjs.com/package/cash-cli"><img src="https://img.shields.io/npm/dt/cash-cli.svg" alt="npm Downloads"></a>  <a href="https://github.com/sindresorhus/xo"><img src="https://img.shields.io/badge/code_style-XO-5ed9c7.svg" alt="Code Style"></a>  <a href="https://www.david-dm.org/xxczaki/cash-cli"><img src="https://david-dm.org/xxczaki/cash-cli.svg" alt="David"></a></p>
 </p>
 
-![Console](https://i.imgur.com/kOhOiBU.gif)
+<p align="center"><img src="https://i.imgur.com/kOhOiBU.gif" alt="Screenshot"></p>
 
 ## Installation
 

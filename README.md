@@ -8,17 +8,18 @@
 <p align="center"><img src="https://i.imgur.com/kOhOiBU.gif" alt="Screenshot"></p>
 
 [Discuss it on Product Hunt](https://www.producthunt.com/posts/cash-cli)
-## Installation
+## Installation using :package: npm
 
 **[Click here for more detailed installation guide](https://github.com/xxczaki/cash-cli/wiki/1.-Installation)**
 
-### :package: npm<br>![](https://badge.fury.io/js/cash-cli.svg)
+JavaScript version:
 
-Javascript version:
 ```
 npm install -g cash-cli
 ```
+
 TypeScript version:
+
 ```
 npm install -g cash-ts
 ```

@@ -16,7 +16,7 @@
 npm install -g cash-cli
 ```
 
-[You can also use TypeScript version! (beta)](https://www.producthunt.com/posts/cash-cli)
+[You can also use TypeScript version! (beta)](https://github.com/xxczaki/cash-ts)
 
 ## Usage
 

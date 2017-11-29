@@ -7,6 +7,7 @@
 
 <p align="center"><img src="https://i.imgur.com/kOhOiBU.gif" alt="Screenshot"></p>
 
+[Discuss it on Product Hunt](https://www.producthunt.com/posts/cash-cli)
 ## Installation
 
 **[Click here for more detailed installation guide](https://github.com/xxczaki/cash-cli/wiki/1.-Installation)**

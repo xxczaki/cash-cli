@@ -12,17 +12,11 @@
 
 **[Click here for more detailed installation guide](https://github.com/xxczaki/cash-cli/wiki/1.-Installation)**
 
-JavaScript version:
-
 ```
 npm install -g cash-cli
 ```
 
-TypeScript version:
-
-```
-npm install -g cash-ts
-```
+[You can also use TypeScript version! (beta)](https://www.producthunt.com/posts/cash-cli)
 
 ## Usage
 

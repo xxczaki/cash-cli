@@ -14,8 +14,13 @@
 
 ### :package: npm<br>![](https://badge.fury.io/js/cash-cli.svg)
 
+Javascript version:
 ```
 npm install -g cash-cli
+```
+TypeScript version:
+```
+npm install -g cash-ts
 ```
 
 ## Usage

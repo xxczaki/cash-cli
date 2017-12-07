@@ -7,4 +7,5 @@ node_js:
  - "4"
 before_install:
   - npm install --global npm
-after_success: npm run coveralls
+after_success:
+   - ./bin/codecov -e TRAVIS_NODE_VERSION -f coverage/coverage.json

@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "1.4.8",
+	"version": "1.4.9",
 	"description": "Exchange Rates Online using your terminal!",
 	"author": {
 		"name": "Anthony Kepinski",
@@ -16,7 +16,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "xo",
-		 "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec tests/tests.js -t 100000 && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+		 "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec tests/tests.js -t 100000 && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
 	},
 	"xo": {
 		"rules": {

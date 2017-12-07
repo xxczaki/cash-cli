@@ -1,8 +1,10 @@
 language: node_js
 node_js:
-  - '8'
-  - '7'
-install:
-  - npm install
-script:
-  - npm test
+ - "8"
+ - "7"
+ - "6"
+ - "5"
+ - "4"
+before_install:
+  - npm install --global npm
+after_success: npm run coveralls

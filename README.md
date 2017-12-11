@@ -41,6 +41,7 @@ cash 10 usd eur rub pln
 See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/currencies.json) file.
 
 ## npm Dependencies [![Known Vulnerabilities](https://snyk.io/test/github/xxczaki/cash-cli/badge.svg)](https://snyk.io/test/github/xxczaki/cash-cli)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fxxczaki%2Fcash-cli.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fxxczaki%2Fcash-cli?ref=badge_shield)
 
 - [chalk](https://www.npmjs.com/package/chalk)
 - [got](https://www.npmjs.com/package/got)
@@ -56,3 +57,6 @@ See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/curren
 ## License
 
 [MIT](https://opensource.org/licenses/MIT) © Anthony Kepinski
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fxxczaki%2Fcash-cli.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fxxczaki%2Fcash-cli?ref=badge_large)

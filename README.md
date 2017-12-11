@@ -56,3 +56,5 @@ See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/curren
 ## License
 
 [MIT](https://opensource.org/licenses/MIT) © Anthony Kepinski
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fxxczaki%2Fcash-cli.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fxxczaki%2Fcash-cli?ref=badge_large)

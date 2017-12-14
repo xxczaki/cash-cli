@@ -15,15 +15,13 @@
 	"homepage": "https://github.com/xxczaki/cash-cli",
 	"main": "index.js",
 	"scripts": {
-		"test": "xo",
 		"coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
 	},
 	"xo": {
 		"rules": {
 			"unicorn/no-process-exit": 0,
 			"unicorn/explicit-length-check": 0
-		}
-	},
+		},
 	"bin": {
 		"cash": "./bin/index.js"
 	},

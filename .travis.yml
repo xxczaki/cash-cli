@@ -7,5 +7,3 @@ node_js:
  - "4"
 before_install:
   - npm install --global npm
-after_success:
-- npm run coveralls

@@ -15,7 +15,7 @@
 	"homepage": "https://github.com/xxczaki/cash-cli",
 	"main": "index.js",
 	"scripts": {
-		"test": "xo && nyc --reporter=html --reporter=text mocha",
+		"test": "xo",
 		"coverage": "nyc report --reporter=text-lcov | coveralls"
 	},
 	"xo": {

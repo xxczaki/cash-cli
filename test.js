@@ -2,7 +2,7 @@ const got = require('got');
 const money = require('money');
 const chalk = require('chalk');
 const ora = require('ora');
-const currencies = require('../lib/currencies.json');
+const currencies = require('./lib/currencies.json');
 
 const API = 'https://api.fixer.io/latest';
 

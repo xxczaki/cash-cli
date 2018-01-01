@@ -8,6 +8,7 @@
 		"url": "https://akepinski.me"
 	},
 	"license": "MIT",
+	"preferGlobal": true,
 	"repository": "https://github.com/xxczaki/cash-cli",
 	"bugs": {
 		"url": "https://github.com/xxczaki/cash-cli/issues"

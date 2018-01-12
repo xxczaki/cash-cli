@@ -7,43 +7,27 @@ const version = () => {
 };
 
 const help = () => {
-	console.log(chalk.yellow(`
+	console.log(`
 Usage:
 
- $ cash <amount> <currency>
+ $ ${chalk.cyan('cash')} ${chalk.green('<amount>')} ${chalk.yellow('<currency>')}
 
- $ cash <command>
+ $ ${chalk.cyan('cash')} ${chalk.magenta('<command>')}
 
 Commands:
---help        Display help message
---version     Display version number
+${chalk.magenta('--help,  -h')}       Display help message 
+${chalk.magenta('--version,  -v')}     Display version number    
 
-Currencies:
- • usd
- • pln
- • rub
- • aud
- • chf
- • eur
- • bgn
- • jpy
- • cad
- • try
- • mxn
-
- Full list of currencies: http://akep.us/currencies
+ List of currencies: http://akep.us/currencies
 
 Examples:
 
- $ cash 1 usd
+ $ ${chalk.cyan('cash')} ${chalk.green('1')} ${chalk.yellow('usd')}
 
- $ cash 1 usd eur pln aud
+ $ ${chalk.cyan('cash')} ${chalk.green('1')} ${chalk.yellow('usd eur pln aud')}
 
- $ cash --help
-
- Cash CLI comes with no warranty.
- The rates are updated daily around 4PM CET every working day.
-  `));
+ $ ${chalk.cyan('cash')} ${chalk.magenta('--help')}
+  `);
 	process.exit(1);
 };
 

@@ -1,5 +1,8 @@
 const chalk = require('chalk');
+const updateNotifier = require('update-notifier');
 const pkg = require('../package.json');
+
+updateNotifier({pkg}).notify();
 
 const version = () => {
 	console.log(pkg.version);

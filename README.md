@@ -11,6 +11,8 @@
 [Discuss it on Product Hunt](https://www.producthunt.com/posts/cash-cli)
 ## Installation using :package: npm
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/xxczaki/cash-cli.svg)](https://greenkeeper.io/)
+
 **[Click here for more detailed installation guide](https://github.com/xxczaki/cash-cli/wiki/1.-Installation)**
 
 ```

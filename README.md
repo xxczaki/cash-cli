@@ -6,7 +6,7 @@
 
 </p>
 </p>
-<p align="center"><img src="https://i.imgur.com/XxnHimq.gif" alt="Screenshot"></p>
+<p align="center"><img src="https://i.imgur.com/2lWAUKK.gif" alt="Screenshot"></p>
 
 [Discuss it on Product Hunt](https://www.producthunt.com/posts/cash-cli)
 ## Installation using :package: npm

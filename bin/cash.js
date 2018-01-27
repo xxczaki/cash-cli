@@ -6,7 +6,7 @@ const currencies = require('../lib/currencies.json');
 
 const API = 'https://api.fixer.io/latest';
 
-const cashh = command => {
+const cash = command => {
 	const amount = command.amount;
 	const from = command.from.toUpperCase();
 	const to = command.to.filter(item => item !== from).map(item => item.toUpperCase());
@@ -50,4 +50,4 @@ const cashh = command => {
 	});
 };
 
-module.exports = cashh;
+module.exports = cash;

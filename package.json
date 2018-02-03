@@ -22,7 +22,8 @@
 		"rules": {
 			"unicorn/no-process-exit": 0,
 			"unicorn/explicit-length-check": 0
-		}
+		},
+		"esnext": "true"
 	},
 	"bin": {
 		"cash": "./bin/index.js"

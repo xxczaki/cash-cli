@@ -44,6 +44,6 @@
 		"update-notifier": "^2.3.0"
 	},
 	"devDependencies": {
-		"xo": "*"
+		"xo": ">=0.20.0"
 	}
 }

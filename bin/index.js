@@ -9,6 +9,6 @@ helpers(argv);
 const command = {
 	amount: argv[0] || 1,
 	from: argv[1] || 'USD',
-	to: (argv.length > 2) ? process.argv.slice(4) : ['USD', 'EUR', 'GBP', 'BRL']
+	to: (argv.length > 2) ? process.argv.slice(4) : ['USD', 'EUR', 'GBP', 'PLN']
 };
 cash(command);

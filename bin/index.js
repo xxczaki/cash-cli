@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
+const Conf = require('conf');
 const helpers = require('./helpers.js');
 const cash = require('./cash.js');
-const Conf = require('conf');
 const config = new Conf();
 
 const argv = process.argv.slice(2);

@@ -8,8 +8,8 @@
 	<a href="https://circleci.com/gh/xxczaki/cash-cli/"><img src="https://circleci.com/gh/xxczaki/cash-cli.svg?style=svg" alt="Build Status"></a>  
 	<a href="https://npmjs.com/package/cash-cli"><img src="https://img.shields.io/npm/dt/cash-cli.svg" alt="npm Downloads"></a>  
 	<a href="https://github.com/sindresorhus/xo"><img src="https://img.shields.io/badge/code_style-XO-5ed9c7.svg" alt="Code Style"></a>  
-	<a href="https://www.david-dm.org/xxczaki/cash-cli"><img src="https://david-dm.org/xxczaki/cash-cli.svg" alt="David"></a> 
-	<a class="badge-align" href="https://www.codacy.com/app/xxczaki/cash-cli?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xxczaki/cash-cli&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/9f001c6bc6c544faa6b3b09008f01e10"/></a> 
+	<a href="https://www.david-dm.org/xxczaki/cash-cli"><img src="https://david-dm.org/xxczaki/cash-cli.svg" alt="David"></a>
+	<a class="badge-align" href="https://www.codacy.com/app/xxczaki/cash-cli?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xxczaki/cash-cli&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/9f001c6bc6c544faa6b3b09008f01e10"/></a>
 	<a href='https://github.com/agarrharr/awesome-cli-apps'><img src='https://awesome.re/mentioned-badge.svg' alt='Mentioned in Awesome CLI Apps' /></a>
 
 </p>
@@ -50,6 +50,7 @@ See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/curren
 ## npm Dependencies [![Known Vulnerabilities](https://snyk.io/test/github/xxczaki/cash-cli/badge.svg)](https://snyk.io/test/github/xxczaki/cash-cli)
 
 - [chalk](https://www.npmjs.com/package/chalk)
+- [conf](https://www.npmjs.com/package/conf)
 - [got](https://www.npmjs.com/package/got)
 - [money](https://www.npmjs.com/package/money)
 - [ora](https://www.npmjs.com/package/ora)

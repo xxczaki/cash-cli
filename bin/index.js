@@ -3,6 +3,7 @@
 const Conf = require('conf');
 const helpers = require('./helpers.js');
 const cash = require('./cash.js');
+
 const config = new Conf();
 
 const argv = process.argv.slice(2);

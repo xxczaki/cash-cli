@@ -7,9 +7,9 @@ const config = new Conf();
 updateNotifier({pkg}).notify();
 
 const saveCurrencies = (argv) => {
-	config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD') )
-	config.set('defaultTo', (argv.length > 2) ? process.argv.slice(4) : config.get('defaultTo', ['USD', 'EUR', 'GBP', 'PLN']))
-	console.log('Saved default currencies to '+config.path)
+	config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD') );
+	config.set('defaultTo', (argv.length > 2) ? process.argv.slice(4) : config.get('defaultTo', ['USD', 'EUR', 'GBP', 'PLN']));
+	console.log('Saved default currencies to '+config.path);
 	process.exit(1);
 };
 

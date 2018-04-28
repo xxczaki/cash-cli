@@ -1,5 +1,6 @@
 const chalk = require('chalk');
 const Conf = require('conf');
+const pkg = require('../package.json');
 
 const config = new Conf();
 

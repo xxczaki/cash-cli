@@ -1,11 +1,7 @@
 const chalk = require('chalk');
-const updateNotifier = require('update-notifier');
 const Conf = require('conf');
-const pkg = require('../package.json');
 
 const config = new Conf();
-
-updateNotifier({pkg}).notify();
 
 const saveCurrencies = argv => {
 	config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD'));

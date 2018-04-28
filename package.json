@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "1.6.3",
+	"version": "1.6.4",
 	"description": "Exchange Rates Online using your terminal!",
 	"author": {
 		"name": "Anthony Kepinski",
@@ -37,7 +37,7 @@
 		"cash"
 	],
 	"dependencies": {
-		"chalk": "^2.3.2",
+		"chalk": "^2.4.0",
 		"conf": "^1.4.0",
 		"got": "^8.3.0",
 		"money": "^0.2.0",

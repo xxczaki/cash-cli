@@ -10,7 +10,7 @@ const cash = command => {
 	const amount = command.amount;
 	const from = command.from.toUpperCase();
 	const to = command.to.filter(item => item !== from).map(item => item.toUpperCase());
-// Loading spinner
+	// Loading spinner
 	console.log();
 	const loading = ora({
 		text: 'Converting currency...',
@@ -21,13 +21,13 @@ const cash = command => {
 		}
 	});
 	loading.start();
-// Fetching data from ECB
+	// Fetching data from ECB
 	got(API, {
 		json: true
 	}).then(response => {
 		money.base = response.body.base;
 		money.rates = response.body.rates;
-// Output
+		// Output
 		to.forEach(item => {
 			if (currencies[item]) {
 				loading.succeed(`${chalk.green(money.convert(amount, {from, to: item}).toFixed(2))} ${`(${item})`} ${currencies[item]}`);
@@ -35,7 +35,7 @@ const cash = command => {
 				loading.warn(`${chalk.yellow(`The "${item}" currency not found `)}`);
 			}
 		});
-// More output
+		// More output
 		console.log(chalk.underline.gray(`\nConversion of ${chalk.bold(from)} ${chalk.bold(amount)}`));
 		process.exit(1);
 	}).catch(err => {

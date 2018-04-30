@@ -54,7 +54,7 @@ const helpers = argv => {
 	if (argv.indexOf('--help') !== -1 || argv.indexOf('-h') !== -1 || !argv.length) {
 		help();
 	}
-    // Save
+	// Save
 	if (argv.indexOf('--save') !== -1 || argv.indexOf('-s') !== -1 || !argv.length) {
 		saveCurrencies(argv);
 	}

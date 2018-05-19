@@ -7,7 +7,7 @@ const currencies = require('../lib/currencies.json');
 const API = 'https://api.fixer.io/latest';
 // Dealing with basic calculations
 const cash = command => {
-	const amount = command.amount;
+	const {amount} = command;
 	const from = command.from.toUpperCase();
 	const to = command.to.filter(item => item !== from).map(item => item.toUpperCase());
 	// Loading spinner

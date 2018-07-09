@@ -3,7 +3,7 @@ const money = require('money');
 const chalk = require('chalk');
 const ora = require('ora');
 const currencies = require('../lib/currencies.json');
-// API Source
+// API Source with access key
 const API = 'http://data.fixer.io/api/latest?access_key=37ae430d6c9fa218d24d245e21541c77';
 // Dealing with basic calculations
 const cash = command => {
@@ -13,10 +13,10 @@ const cash = command => {
 	// Loading spinner
 	console.log();
 	const loading = ora({
-		text: 'Converting currency...',
+		text: 'Converting...',
 		color: 'green',
 		spinner: {
-			interval: 200,
+			interval: 150,
 			frames: to
 		}
 	});

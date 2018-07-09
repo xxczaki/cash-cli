@@ -1,7 +1,7 @@
 {
 	"name": "cash-cli",
-	"version": "1.7.4",
-	"description": "Exchange Rates Online using your terminal!",
+	"version": "2.0.0",
+	"description": "Exchange Rates using your terminal!",
 	"author": {
 		"name": "Anthony Kepinski",
 		"email": "hello@akepinski.me",

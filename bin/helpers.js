@@ -29,17 +29,13 @@ ${chalk.magenta('--save,  -s')}       Save currencies as default
 ${chalk.magenta('--help,  -h')}       Display help message
 ${chalk.magenta('--version,  -v')}     Display version number
 
- List of currencies: http://akep.us/currencies
-
 Examples:
 
  $ ${chalk.cyan('cash')} ${chalk.green('1')} ${chalk.yellow('usd')}
 
- $ ${chalk.cyan('cash')} ${chalk.green('1')} ${chalk.yellow('usd eur pln aud')}
+ $ ${chalk.cyan('cash')} ${chalk.green('1')} ${chalk.yellow('usd eur aud')}
 
  $ ${chalk.cyan('cash')} ${chalk.magenta('--save')} ${chalk.green('usd')} ${chalk.yellow('eur pln aud')}
-
- $ ${chalk.cyan('cash')} ${chalk.magenta('--help')}
   `);
 	process.exit(1);
 };

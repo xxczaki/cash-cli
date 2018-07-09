@@ -1,7 +1,7 @@
 {
 	"name": "cash-cli",
-	"version": "2.0.0",
-	"description": "Exchange Rates using your terminal!",
+	"version": "2.0.2",
+	"description": "Exchange Currency Rates using your terminal!",
 	"author": {
 		"name": "Anthony Kepinski",
 		"email": "hello@akepinski.me",
@@ -29,12 +29,18 @@
 		"cash": "./bin/index.js"
 	},
 	"keywords": [
-		"cli",
+		"cash-cli",
 		"currency",
 		"exchange",
 		"rates",
 		"convert",
-		"cash"
+		"cash",
+		"fixer",
+		"api",
+		"money",
+		"$$$",
+		"currencies",
+		"cli"
 	],
 	"dependencies": {
 		"chalk": "^2.4.1",

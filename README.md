@@ -15,7 +15,7 @@
 </p>
 <p align="center"><img src="https://cdn.rawgit.com/xxczaki/cash-cli/aa171028/cash.svg" alt="SVG"></p>
 
-<p align="center"><a href="https://www.producthunt.com/posts/cash-cli">:rocket: Discuss it on Product Hunt!</a><p>
+<p align="center"><a href="https://github.com/xxczaki/cash-cli/wiki/Introducing-cash-cli-2.0!">🎉 Introducing cash-cli 2.0 🎉</a><p>
 
 ## Installation using :package: npm
 

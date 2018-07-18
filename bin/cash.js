@@ -6,10 +6,10 @@ const currencies = require('../lib/currencies.json');
 // API Source with access key
 const API = 'https://data.fixer.io/api/latest?access_key=602f9c1bb2f839c76acceca3a4279922';
 // Dealing with basic calculations
-const cash = command => {
+const cash = async command => {
 	const {amount} = command;
-	const from = command.from.toUpperCase();
-	const to = command.to.filter(item => item !== from).map(item => item.toUpperCase());
+	const from = await command.from.toUpperCase();
+	const to = await command.to.filter(item => item !== from).map(item => item.toUpperCase());
 	// Loading spinner
 	console.log();
 	const loading = ora({
@@ -22,7 +22,7 @@ const cash = command => {
 	});
 	loading.start();
 	// Fetching data from ECB
-	got(API, {
+	await got(API, {
 		json: true
 	}).then(response => {
 		money.base = response.body.base;
@@ -30,7 +30,7 @@ const cash = command => {
 		// Output
 		to.forEach(item => {
 			if (currencies[item]) {
-				loading.succeed(`${chalk.green(money.convert(amount, {from, to: item}).toFixed(2))} ${`(${item})`} ${currencies[item]}`);
+				loading.succeed(`${chalk.green(money.convert(amount, {from, to: item}).toFixed(3))} ${`(${item})`} ${currencies[item]}`);
 			} else {
 				loading.warn(`${chalk.yellow(`The "${item}" currency not found `)}`);
 			}

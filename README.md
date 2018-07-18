@@ -43,7 +43,7 @@ or
 cash 10 usd eur rub pln
 ```
 
-## Available Currencies:
+## Available Currencies
 
 See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/currencies.json) file.
 

@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const ora = require('ora');
 const currencies = require('../lib/currencies.json');
 // API Source with access key
-const API = 'https://data.fixer.io/api/latest?access_key=YOUR_API_KEY';
+const API = 'https://data.fixer.io/api/latest?access_key=602f9c1bb2f839c76acceca3a4279922';
 // Dealing with basic calculations
 const cash = async command => {
 	const {amount} = command;

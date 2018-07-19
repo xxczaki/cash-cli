@@ -46,15 +46,6 @@ cash 10 usd eur rub pln
 
 See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/currencies.json) file.
 
-## npm Dependencies [![Known Vulnerabilities](https://snyk.io/test/github/xxczaki/cash-cli/badge.svg)](https://snyk.io/test/github/xxczaki/cash-cli)
-
-- [chalk](https://www.npmjs.com/package/chalk)
-- [conf](https://www.npmjs.com/package/conf)
-- [got](https://www.npmjs.com/package/got)
-- [money](https://www.npmjs.com/package/money)
-- [ora](https://www.npmjs.com/package/ora)
-- [xo](https://www.npmjs.com/package/xo)
-
 ## Thanks:
 
 - [Money.js](http://openexchangerates.github.io/money.js/) for providing great and simple conversion library.

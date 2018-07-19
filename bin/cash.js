@@ -37,14 +37,14 @@ const cash = async command => {
 		});
 		// More output
 		console.log(chalk.underline.gray(`\nConversion of ${chalk.bold(from)} ${chalk.bold(amount)}`));
-		process.exit(1);
+		process.exit(0);
 	}).catch(err => {
+		/* istanbul ignore if */
 		if (err.code === 'ENOTFOUND') {
 			loading.fail(chalk.red('Please check your internet connection!\n'));
 		} else {
 			loading.fail(chalk.red('Internal server error :(\n'));
 		}
-
 		process.exit(1);
 	});
 };

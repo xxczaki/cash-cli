@@ -8,12 +8,12 @@ const saveCurrencies = argv => {
 	config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD'));
 	config.set('defaultTo', (argv.length > 2) ? process.argv.slice(4) : config.get('defaultTo', ['USD', 'EUR', 'GBP', 'PLN']));
 	console.log(chalk.green('Saved default currencies to ' + config.path));
-	process.exit(1);
+	process.exit(0);
 };
 // Show installed version
 const version = () => {
 	console.log(pkg.version);
-	process.exit(1);
+	process.exit(0);
 };
 // Show help message
 const help = () => {
@@ -37,7 +37,7 @@ Examples:
 
  $ ${chalk.cyan('cash')} ${chalk.magenta('--save')} ${chalk.green('usd')} ${chalk.yellow('eur pln aud')}
   `);
-	process.exit(1);
+	process.exit(0);
 };
 // Helpers
 const helpers = argv => {

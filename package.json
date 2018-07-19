@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "2.0.4",
+	"version": "2.0.5",
 	"description": "Exchange Currency Rates using your terminal!",
 	"author": {
 		"name": "Antoni Kepinski",
@@ -16,10 +16,11 @@
 	"homepage": "https://github.com/xxczaki/cash-cli",
 	"main": "index.js",
 	"engines": {
-        "node": ">=8.0.0"
-    },
+		"node": ">=8.0.0"
+	},
 	"scripts": {
-		"test": "xo"
+		"test": "xo && nyc ava",
+		"coverage": "nyc report --reporter=text-lcov | coveralls"
 	},
 	"xo": {
 		"rules": {
@@ -48,11 +49,15 @@
 	"dependencies": {
 		"chalk": "^2.4.1",
 		"conf": "^2.0.0",
+		"execa": "^0.10.0",
 		"got": "^8.3.2",
 		"money": "^0.2.0",
 		"ora": "^3.0.0"
 	},
 	"devDependencies": {
+		"ava": "*",
+		"coveralls": "*",
+		"nyc": "*",
 		"xo": "*"
 	}
 }

@@ -1,6 +1,11 @@
 import test from 'ava';
 import execa from 'execa';
 
+test('Test output without arguments', async t => {
+	const {stdout} = await execa.shell('node ./bin/index.js 1');
+	t.true(stdout.length > 0);
+});
+
 test('Test --help output', async t => {
 	const {stdout} = await execa.shell('node ./bin/index.js --help');
 	t.true(stdout.length > 0);
@@ -14,6 +19,16 @@ test('Test --version output', async t => {
 test('Test --save output', async t => {
 	const {stdout} = await execa.shell('node ./bin/index.js --save pln usd eur chf');
 	t.true(stdout.length < 150);
+});
+
+test('Test --save output without currencies', async t => {
+	const {stdout} = await execa.shell('node ./bin/index.js --save');
+	t.true(stdout.length < 150);
+});
+
+test('Test Conversion API (default currencies)', async t => {
+	const {stdout} = await execa.shell('node ./bin/index.js 10');
+	t.true(stdout.length > 0);
 });
 
 test('Test Conversion API (1 currency)', async t => {

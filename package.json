@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "2.0.5",
+	"version": "2.0.6",
 	"description": "Exchange Currency Rates using your terminal!",
 	"author": {
 		"name": "Antoni Kepinski",

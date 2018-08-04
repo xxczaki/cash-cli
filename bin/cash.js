@@ -7,10 +7,10 @@ const currencies = require('../lib/currencies.json');
 const API = 'https://data.fixer.io/api/latest?access_key=602f9c1bb2f839c76acceca3a4279922';
 // Dealing with basic calculations
 const cash = async command => {
-	const {amount} = command;
-	const from = await command.from.toUpperCase();
-	const to = await command.to.filter(item => item !== from).map(item => item.toUpperCase());
-	// Loading spinner
+	const {amount} = await command;
+	const from = command.from.toUpperCase();
+	const to = command.to.filter(item => item !== from).map(item => item.toUpperCase());
+	// Spinner
 	console.log();
 	const loading = ora({
 		text: 'Converting...',

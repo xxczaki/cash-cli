@@ -16,30 +16,27 @@
 
 <p align="center"><a href="https://github.com/xxczaki/cash-cli/wiki/Introducing-cash-cli-2.0!">🎉 Introducing cash-cli 2.0 🎉</a><p>
 
-## Installation using :package: npm
-
-**[Click here for more detailed installation guide](https://github.com/xxczaki/cash-cli/wiki/1.-Installation)**
+## Installation
 
 ```
-npm install -g cash-cli
+npm install --global cash-cli
 ```
 
 ## Usage
 
-```
-cash <amount> <currency code>
-```
+```bash
+  Usage
+    $ cash <amount> <from> <to>
 
-for example:
+  Options
+    --help -h     Display help message
+    --version -v  Display version number
+    --save -s     Save currencies as default
 
-```
-cash 1 usd
-```
-
-or
-
-```
-cash 10 usd eur rub pln
+  Examples
+    $ cash 10 usd
+    $ cash 10 usd eur aud
+    $ cash --save usd eur pln aud
 ```
 
 ## Available Currencies

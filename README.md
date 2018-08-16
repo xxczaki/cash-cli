@@ -18,10 +18,15 @@
 
 ## Installation
 
+via npm :package:
 ```
 npm install --global cash-cli
 ```
 
+via homebrew :beer:
+```
+brew install cash-cli
+```
 ## Usage
 
 ```bash

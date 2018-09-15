@@ -2,13 +2,13 @@ import test from 'ava';
 import execa from 'execa';
 
 test('Test output without arguments', async t => {
-	const {stdout} = await execa.shell('node ./bin/index.js 1');
-	t.true(stdout.length > 0);
+	const ret = await execa.shell('node ./bin/index.js');
+	t.regex(ret.stdout, /Conversion of USD 1/);
 });
 
 test('Test --help output', async t => {
-	const {stdout} = await execa.shell('node ./bin/index.js --help');
-	t.true(stdout.length > 0);
+	const ret = await execa.shell('node ./bin/index.js --help');
+	t.regex(ret.stdout, /Usage/);
 });
 
 test('Test --version output', async t => {
@@ -17,33 +17,33 @@ test('Test --version output', async t => {
 });
 
 test('Test --save output', async t => {
-	const {stdout} = await execa.shell('node ./bin/index.js --save pln usd eur chf');
-	t.true(stdout.length < 150);
+	const ret = await execa.shell('node ./bin/index.js --save pln usd eur chf');
+	t.regex(ret.stdout, /Saved default currencies to/);
 });
 
 test('Test --save output without currencies', async t => {
-	const {stdout} = await execa.shell('node ./bin/index.js --save');
-	t.true(stdout.length < 150);
+	const ret = await execa.shell('node ./bin/index.js --save');
+	t.regex(ret.stdout, /Saved default currencies to/);
 });
 
 test('Test Conversion API (default currencies)', async t => {
-	const {stdout} = await execa.shell('node ./bin/index.js 10');
-	t.true(stdout.length > 0);
+	const ret = await execa.shell('node ./bin/index.js 10');
+    t.regex(ret.stdout, /10/);
 });
 
 test('Test Conversion API (1 currency)', async t => {
-	const {stdout} = await execa.shell('node ./bin/index.js 10 usd pln');
-	t.true(stdout.length > 0);
+	const ret = await execa.shell('node ./bin/index.js 10 usd pln');
+	t.regex(ret.stdout, /Polish Zloty/);
 });
 
 test('Test Conversion API (10 currencies)', async t => {
-	const {stdout} = await execa.shell('node ./bin/index.js 10 usd pln eur aud btc chf gbp azn mmk tnd rsd');
-	t.true(stdout.length > 0);
+	const ret = await execa.shell('node ./bin/index.js 10 usd pln eur aud btc chf gbp azn mmk tnd rsd');
+	t.regex(ret.stdout, /Conversion of USD 10/);
 });
 
 test('Test currency not found error', async t => {
-	const {stdout} = await execa.shell('node ./bin/index.js 10 foo bar');
-	t.true(stdout.length > 0);
+	const ret = await execa.shell('node ./bin/index.js 10 foo bar');
+	t.regex(ret.stdout, /The "BAR" currency not found/);
 });
 
 test('Test internal server error', async t => {

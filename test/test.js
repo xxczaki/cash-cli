@@ -28,7 +28,7 @@ test('Test --save output without currencies', async t => {
 
 test('Test Conversion API (default currencies)', async t => {
 	const ret = await execa.shell('node ./bin/index.js 10');
-    t.regex(ret.stdout, /10/);
+        t.regex(ret.stdout, /10/);
 });
 
 test('Test Conversion API (1 currency)', async t => {

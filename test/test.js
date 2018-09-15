@@ -43,7 +43,7 @@ test('Test Conversion API (10 currencies)', async t => {
 
 test('Test currency not found error', async t => {
 	const ret = await execa.shell('node ./bin/index.js 10 foo bar');
-	t.regex(ret.stdout, /The "BAR" currency not found/);
+	t.regex(ret.stderr, /The "BAR" currency not found/);
 });
 
 test('Test internal server error', async t => {

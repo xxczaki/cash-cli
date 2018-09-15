@@ -33,7 +33,7 @@ test('Test Conversion API (default currencies)', async t => {
 
 test('Test Conversion API (1 currency)', async t => {
 	const ret = await execa.shell('node ./bin/index.js 10 usd pln');
-	t.regex(ret.stdout, /Polish Zloty/);
+	t.regex(ret.stderr, /Polish Zloty/);
 });
 
 test('Test Conversion API (10 currencies)', async t => {

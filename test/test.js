@@ -3,12 +3,12 @@ import execa from 'execa';
 
 test('Test output without arguments', async t => {
 	const ret = await execa.shell('node ./bin/index.js');
-	t.regex(ret.stdout, /Conversion of USD 1/);
+	t.regex(ret.stdout, /Usage/);
 });
 
 test('Test --help output', async t => {
 	const ret = await execa.shell('node ./bin/index.js --help');
-	t.regex(ret.stdout, /Usage/);
+	t.regex(ret.stdout, /Examples/);
 });
 
 test('Test --version output', async t => {

@@ -38,9 +38,9 @@ const cash = async command => {
 		// More output
 		console.log(chalk.underline.gray(`\nConversion of ${chalk.bold(from)} ${chalk.bold(amount)}`));
 		process.exit(0);
-	}).catch(err => {
+	}).catch(error => {
 		/* istanbul ignore if */
-		if (err.code === 'ENOTFOUND') {
+		if (error.code === 'ENOTFOUND') {
 			loading.fail(chalk.red('Please check your internet connection!\n'));
 		} else {
 			loading.fail(chalk.red('Internal server error :(\n'));

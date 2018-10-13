@@ -8,7 +8,7 @@
 	<a href="https://npmjs.com/package/cash-cli"><img src="https://img.shields.io/npm/dt/cash-cli.svg" alt="npm Downloads"></a>  
 	<a href="https://github.com/sindresorhus/xo"><img src="https://img.shields.io/badge/code_style-XO-5ed9c7.svg" alt="Code Style"></a>  
 	<a href="https://www.david-dm.org/xxczaki/cash-cli"><img src="https://david-dm.org/xxczaki/cash-cli.svg" alt="David"></a>
-	<a href='https://github.com/agarrharr/awesome-cli-apps'><img src='https://awesome.re/mentioned-badge.svg' alt='Mentioned in Awesome CLI Apps' /></a>
+	<a href='https://github.com/sindresorhus/awesome-nodejs'><img src='https://awesome.re/mentioned-badge.svg' alt='Mentioned in Awesome Node.js' /></a>
 
 </p>
 </p>

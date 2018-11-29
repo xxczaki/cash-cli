@@ -25,6 +25,7 @@ Usage:
  $ ${chalk.cyan('cash')} ${chalk.magenta('<command>')}
 
 Commands:
+
 ${chalk.magenta('--save,  -s')}       Save currencies as default 
 ${chalk.magenta('--help,  -h')}       Display help message
 ${chalk.magenta('--version,  -v')}    Display version number

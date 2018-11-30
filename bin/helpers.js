@@ -3,6 +3,7 @@ const Conf = require('conf');
 const pkg = require('../package.json');
 
 const config = new Conf();
+
 // Default currencies config
 const saveCurrencies = argv => {
 	config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD'));
@@ -10,11 +11,20 @@ const saveCurrencies = argv => {
 	console.log(chalk.green('Saved default currencies to ' + config.path));
 	process.exit(0);
 };
+
 // Show installed version
 const version = () => {
 	console.log(pkg.version);
 	process.exit(0);
 };
+
+// Set API key
+const key = () => {
+	config.set('key', process.argv[3]);
+	console.log(chalk.green('Saved API key to ' + config.path));
+	process.exit(0);
+};
+
 // Show help message
 const help = () => {
 	console.log(`
@@ -25,13 +35,14 @@ Usage:
  $ ${chalk.cyan('cash')} ${chalk.magenta('<command>')}
 
 Commands:
-${chalk.magenta('--save,  -s')}       Save currencies as default 
+${chalk.magenta('--key,  -k')}       Set API key
 ${chalk.magenta('--help,  -h')}       Display help message
 ${chalk.magenta('--version,  -v')}     Display version number
+${chalk.magenta('--save,  -s')}       Save currencies as default 
 
 Examples:
 
- $ ${chalk.cyan('cash')} ${chalk.green('1')} ${chalk.yellow('usd')}
+ $ ${chalk.cyan('cash')} ${chalk.magenta('--key')} [key]
 
  $ ${chalk.cyan('cash')} ${chalk.green('1')} ${chalk.yellow('usd eur aud')}
 
@@ -39,6 +50,7 @@ Examples:
   `);
 	process.exit(0);
 };
+
 // Helpers
 const helpers = argv => {
 	// Version
@@ -50,9 +62,15 @@ const helpers = argv => {
 	if (argv.indexOf('--help') !== -1 || argv.indexOf('-h') !== -1 || !argv.length) {
 		help();
 	}
+
 	// Save
 	if (argv.indexOf('--save') !== -1 || argv.indexOf('-s') !== -1 || !argv.length) {
 		saveCurrencies(argv);
+	}
+
+	// Help
+	if (argv.indexOf('--key') !== -1 || argv.indexOf('-k') !== -1 || !argv.length) {
+		key();
 	}
 };
 

@@ -5,4 +5,3 @@ os:
 - osx
 node_js:
 - "node"
-after_success: npm run coverage

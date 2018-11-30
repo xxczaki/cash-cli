@@ -2,12 +2,17 @@ const got = require('got');
 const money = require('money');
 const chalk = require('chalk');
 const ora = require('ora');
+const Conf = require('conf');
 const currencies = require('../lib/currencies.json');
-// API Source with access key
-const API = 'https://data.fixer.io/api/latest?access_key=602f9c1bb2f839c76acceca3a4279922';
+
+const config = new Conf();
+
+// API Source
+const API = `http://data.fixer.io/api/latest?access_key=${config.get('key')}`;
+
 // Dealing with basic calculations
 const cash = async command => {
-	const {amount} = await command;
+	const {amount} = command;
 	const from = command.from.toUpperCase();
 	const to = command.to.filter(item => item !== from).map(item => item.toUpperCase());
 	// Spinner

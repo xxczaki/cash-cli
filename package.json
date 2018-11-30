@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "Exchange Currency Rates using your terminal!",
 	"author": {
 		"name": "Antoni Kepinski",
@@ -19,8 +19,8 @@
 		"node": ">=8.0.0"
 	},
 	"scripts": {
-		"test": "xo && nyc ava",
-		"coverage": "nyc report --reporter=text-lcov | coveralls"
+		"postinstall": "echo '> Please type `cash --key` to set your API key!\n'",
+		"test": "xo && ava"
 	},
 	"xo": {
 		"rules": {
@@ -48,16 +48,16 @@
 	],
 	"dependencies": {
 		"chalk": "^2.4.1",
-		"conf": "^2.0.0",
+		"conf": "^2.1.0",
 		"execa": "^1.0.0",
-		"got": "^9.2.2",
+		"first-run": "^1.2.0",
+		"got": "^9.3.2",
 		"money": "^0.2.0",
-		"ora": "^3.0.0"
+		"ora": "^3.0.0",
+		"prompts": "^1.2.1"
 	},
 	"devDependencies": {
 		"ava": "*",
-		"coveralls": "*",
-		"nyc": "*",
 		"xo": "*"
 	}
 }

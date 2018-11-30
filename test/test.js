@@ -26,31 +26,6 @@ test('Test --save output without currencies', async t => {
 	t.regex(ret.stdout, /Saved default currencies to/);
 });
 
-test('Test Conversion API (default currencies)', async t => {
-	const ret = await execa.shell('node ./bin/index.js 10');
-	t.regex(ret.stdout, /10/);
-});
-
-test('Test Conversion API with invalid value', async t => {
-	const ret = await execa.shell('node ./bin/index.js EXT');
-	t.regex(ret.stdout, /Conversion of USD 1/);
-});
-
-test('Test Conversion API (1 currency)', async t => {
-	const ret = await execa.shell('node ./bin/index.js 10 usd pln');
-	t.regex(ret.stderr, /Polish Zloty/);
-});
-
-test('Test Conversion API (10 currencies)', async t => {
-	const ret = await execa.shell('node ./bin/index.js 10 usd pln eur aud btc chf gbp azn mmk tnd rsd');
-	t.regex(ret.stdout, /Conversion of USD 10/);
-});
-
-test('Test currency not found error', async t => {
-	const ret = await execa.shell('node ./bin/index.js 10 foo bar');
-	t.regex(ret.stderr, /The "BAR" currency not found/);
-});
-
 test('Test internal server error', async t => {
 	const error = await t.throws(execa.shell('node ./bin/index.js 10 foo usd'));
 	t.regex(error.message, /Internal server error/);

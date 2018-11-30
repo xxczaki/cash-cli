@@ -1,7 +1,9 @@
 language: node_js
+os:
+- windows
+- linux
+- osx
 node_js:
-- "node"
+- "11"
 - "10"
 - "8"
-- "6"
-after_success: npm run coverage

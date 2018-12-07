@@ -54,7 +54,7 @@
 		"got": "^9.3.2",
 		"money": "^0.2.0",
 		"ora": "^3.0.0",
-		"prompts": "^1.2.1"
+		"prompts": "^2.0.0"
 	},
 	"devDependencies": {
 		"ava": "*",

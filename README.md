@@ -13,8 +13,6 @@
 </p>
 <p align="center"><img src="https://rawcdn.githack.com/xxczaki/cash-cli/master/cash.svg" alt="SVG"></p>
 
-<p align="center"><a href="https://github.com/xxczaki/cash-cli/wiki/Introducing-cash-cli-2.0!">🎉 Introducing cash-cli 2.0 🎉</a><p>
-
 ## Installation
 
 via [npm](https://www.npmjs.com/) :package:
@@ -29,19 +27,16 @@ brew install cash-cli
 ## Usage
 
 ```bash
-  Usage
-    $ cash <amount> <from> <to>
-
-  Options
-    --key -k      Set API key
-    --help -h     Display help message
-    --version -v  Display version number
-    --save -s     Save currencies as default
-
-  Examples
-    $ cash --key [key]
-    $ cash 10 usd eur aud
-    $ cash --save usd eur pln aud
+	Usage
+		$ cash <amount> <from> <to>
+		$ cash <options>
+	Options
+		--set -s 			Set default currencies
+		--key -k	        Set API key
+	Examples
+		$ cash 10 usd eur pln
+		$ cash --set usd aud 
+		$ cash --key [key]
 ```
 
 ## Available Currencies

@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "2.1.1",
+	"version": "3.0.0",
 	"description": "Exchange Currency Rates using your terminal!",
 	"author": {
 		"name": "Antoni Kepinski",
@@ -8,24 +8,19 @@
 		"url": "https://kepinski.me"
 	},
 	"license": "MIT",
-	"preferGlobal": true,
 	"repository": "https://github.com/xxczaki/cash-cli",
 	"bugs": {
 		"url": "https://github.com/xxczaki/cash-cli/issues"
 	},
 	"homepage": "https://github.com/xxczaki/cash-cli",
 	"main": "index.js",
-	"engines": {
-		"node": ">=8.0.0"
-	},
 	"scripts": {
-		"postinstall": "echo '> Please type `cash --key` to set your API key!\n'",
+		"postinstall": "node bin/post-install.js",
 		"test": "xo && ava"
 	},
 	"xo": {
 		"rules": {
-			"unicorn/no-process-exit": 0,
-			"unicorn/explicit-length-check": 0
+			"unicorn/no-process-exit": 0
 		},
 		"esnext": "true"
 	},
@@ -49,15 +44,14 @@
 	"dependencies": {
 		"chalk": "^2.4.1",
 		"conf": "^2.1.0",
-		"execa": "^1.0.0",
-		"first-run": "^1.2.0",
-		"got": "^9.3.2",
+		"got": "^9.4.0",
+		"meow": "^5.0.0",
 		"money": "^0.2.0",
-		"ora": "^3.0.0",
-		"prompts": "^1.2.1"
+		"ora": "^3.0.0"
 	},
 	"devDependencies": {
 		"ava": "*",
+		"execa": "*",
 		"xo": "*"
 	}
 }

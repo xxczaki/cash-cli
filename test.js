@@ -22,6 +22,8 @@ test('Test --save output without currencies', async t => {
 });
 
 test('Test internal server error', async t => {
-	const error = await t.throws(execa.shell('node ./bin/index.js 10 foo usd'));
+	const error = await t.throwsAsync(async () => {
+		await execa.shell('node ./bin/index.js 10 foo usd');
+	});
 	t.regex(error.message, /Internal server error/);
 });

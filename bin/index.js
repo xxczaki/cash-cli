@@ -16,11 +16,11 @@ const cli = meow(`
 		$ cash <amount> <from> <to>
 		$ cash <options>
 	Options
-		--set -s 			Set default currencies
+		--save -s 			Save default currencies
 		--key -k	        Set API key
 	Examples
 		$ cash 10 usd eur pln
-		$ cash --set usd aud 
+		$ cash --save usd aud 
 		$ cash --key [key]
 `, {
 	flags: {
@@ -53,4 +53,14 @@ const command = {
 	to: (argv.length > 2) ? process.argv.slice(4) : config.get('defaultTo', ['USD', 'EUR', 'GBP', 'PLN'])
 };
 
-cash(command);
+// Refuse to run conversion, if there is no API key
+if (config.get('key') === undefined) {
+	console.log(`\n
+	${chalk.red.bold('Fixer.io API key not found!')}
+	${chalk.cyan('Get it here for free: https://fixer.io/signup/free')}
+	${chalk.cyan('Then run `cash --key [key]` to save it')}
+\n`);
+	process.exit(1);
+} else {
+	cash(command);
+}

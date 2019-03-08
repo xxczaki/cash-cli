@@ -5,7 +5,7 @@ summary: Convert Currency Rates using your terminal!
 description: |
   Convert Currency Rates using your terminal!
   
-  Get your API key at https://fixer.io/quickstart
+  Get your API key at https://fixer.io/signup/free
 grade: stable
 confinement: strict
 

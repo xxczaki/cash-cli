@@ -1,5 +1,8 @@
 import test from 'ava';
 import execa from 'execa';
+import Conf from 'conf';
+
+const config = new Conf();
 
 test('--help', async t => {
 	const ret = await execa.shell('node ./bin/index.js --help');
@@ -21,9 +24,12 @@ test('Test --save output without currencies', async t => {
 	t.regex(ret.stdout, /Saved default currencies to/);
 });
 
-test('Test internal server error', async t => {
+test('Test conversion without API key', async t => {
+	// Delete an API key, before this test
+	config.clear();
+
 	const error = await t.throwsAsync(async () => {
 		await execa.shell('node ./bin/index.js 10 foo usd');
 	});
-	t.regex(error.message, /Internal server error/);
+	t.regex(error.message, /Fixer.io API key not found/);
 });

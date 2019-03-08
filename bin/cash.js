@@ -50,6 +50,7 @@ const cash = async command => {
 		} else {
 			loading.fail(chalk.red('Internal server error :(\n'));
 		}
+
 		process.exit(1);
 	});
 };

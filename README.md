@@ -6,7 +6,7 @@
 	<a href="https://travis-ci.org/xxczaki/cash-cli"><img src="https://travis-ci.org/xxczaki/cash-cli.svg?branch=master" alt="Build Status"></a>
 	<a href="https://npmjs.com/package/cash-cli"><img src="https://img.shields.io/npm/dt/cash-cli.svg" alt="npm Downloads"></a>  
 	<a href="https://github.com/sindresorhus/xo"><img src="https://img.shields.io/badge/code_style-XO-5ed9c7.svg" alt="Code Style"></a>  
-	<a href="https://www.david-dm.org/xxczaki/cash-cli"><img src="https://david-dm.org/xxczaki/cash-cli.svg" alt="David"></a>
+	<a href="https://www.david-dm.org/xxczaki/cash-cli"><img src="https://david-dm.org/xxczaki/cash-cli.svg" alt="Dependencies"></a>
 	<a href='https://github.com/sindresorhus/awesome-nodejs'><img src='https://awesome.re/mentioned-badge.svg' alt='Mentioned in Awesome Node.js' /></a>
 
 </p>
@@ -26,16 +26,18 @@ brew install cash-cli
 ```
 ## Usage
 
+> You will need a Fixer.io API key. Get it [here](https://fixer.io/signup/free) for free.
+
 ```bash
 	Usage
 		$ cash <amount> <from> <to>
 		$ cash <options>
 	Options
-		--set -s 			Set default currencies
+		--save -s 			Save default currencies
 		--key -k	        Set API key
 	Examples
 		$ cash 10 usd eur pln
-		$ cash --set usd aud 
+		$ cash --save usd aud 
 		$ cash --key [key]
 ```
 
@@ -51,6 +53,3 @@ See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/curren
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fxxczaki%2Fcash-cli.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fxxczaki%2Fcash-cli?ref=badge_large)
-

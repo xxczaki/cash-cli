@@ -33,6 +33,11 @@ const cli = meow(`
 
 // Set API key
 if (cli.flags.key) {
+	if (/^([a-z0-9]{32})+/i.test(cli.flags.key) === false) {
+		console.log(chalk.red('Provided API key seems invalid, please try again!'));
+		process.exit(1);
+	}
+
 	config.set('key', cli.flags.key);
 	console.log(chalk.green('Saved API key to ' + config.path));
 	process.exit(0);
@@ -48,7 +53,7 @@ if (argv.indexOf('--save') !== -1 || argv.indexOf('-s') !== -1) {
 
 // Handle amount & currencies
 const command = {
-	amount: parseFloat(argv[0]) || 1,
+	amount: Number(argv[0]) || 1,
 	from: argv[1] || config.get('defaultFrom', 'USD'),
 	to: (argv.length > 2) ? process.argv.slice(4) : config.get('defaultTo', ['USD', 'EUR', 'GBP', 'PLN'])
 };

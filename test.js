@@ -4,6 +4,9 @@ import Conf from 'conf';
 
 const config = new Conf();
 
+// Delete an API key, before running tests
+config.clear();
+
 test('--help', async t => {
 	const ret = await execa.shell('node ./bin/index.js --help');
 	t.regex(ret.stdout, /Examples/);
@@ -25,11 +28,17 @@ test('Test --save output without currencies', async t => {
 });
 
 test('Test conversion without API key', async t => {
-	// Delete an API key, before this test
-	config.clear();
-
 	const error = await t.throwsAsync(async () => {
 		await execa.shell('node ./bin/index.js 10 foo usd');
 	});
+
 	t.regex(error.message, /Fixer.io API key not found/);
+});
+
+test('Test setting invalid API key', async t => {
+	const error = await t.throwsAsync(async () => {
+		await execa.shell('node ./bin/index.js --key foo');
+	});
+
+	t.regex(error.message, /Provided API key seems invalid/);
 });

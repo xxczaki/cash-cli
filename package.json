@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "3.0.2",
+	"version": "3.0.3",
 	"description": "Exchange Currency Rates using your terminal!",
 	"author": {
 		"name": "Antoni Kepinski",
@@ -43,11 +43,11 @@
 	],
 	"dependencies": {
 		"chalk": "^2.4.2",
-		"conf": "^3.0.0",
+		"conf": "^4.0.1",
 		"got": "^9.6.0",
 		"meow": "^5.0.0",
 		"money": "^0.2.0",
-		"ora": "^3.2.0"
+		"ora": "^3.4.0"
 	},
 	"devDependencies": {
 		"ava": "*",

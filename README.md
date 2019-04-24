@@ -13,7 +13,7 @@
 </p>
 <p align="center"><img src="https://rawcdn.githack.com/xxczaki/cash-cli/master/cash.svg" alt="SVG"></p>
 
-## Installation
+## Install
 
 via [npm](https://www.npmjs.com/) :package:
 ```
@@ -48,7 +48,7 @@ See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/curren
 ## Thanks:
 
 - [Money.js](http://openexchangerates.github.io/money.js/) for providing great and simple conversion library.
-- [fixer.io](http://fixer.io/) for providing awesome currency conversion API.
+- [Fixer.io](http://fixer.io/) for providing awesome currency conversion API.
 
 ## License
 

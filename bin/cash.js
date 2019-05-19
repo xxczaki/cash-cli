@@ -1,6 +1,6 @@
 'use strict';
 
-const got = require('got');
+const cached = require('cached-got');
 const money = require('money');
 const chalk = require('chalk');
 const ora = require('ora');
@@ -8,6 +8,7 @@ const Conf = require('conf');
 const currencies = require('../lib/currencies.json');
 
 const config = new Conf();
+const {got} = cached('cached-response.json');
 
 // API Source
 const API = `http://data.fixer.io/api/latest?access_key=${config.get('key')}`;
@@ -48,7 +49,7 @@ const cash = async command => {
 		if (error.code === 'ENOTFOUND') {
 			loading.fail(chalk.red('Please check your internet connection!\n'));
 		} else {
-			loading.fail(chalk.red('Internal server error :(\n'));
+			loading.fail(chalk.red('Something went wrong :(\n'));
 		}
 
 		process.exit(1);

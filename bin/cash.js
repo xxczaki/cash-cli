@@ -23,7 +23,7 @@ const cash = async command => {
 		text: 'Converting...',
 		color: 'green',
 		spinner: {
-			interval: 150,
+			interval: 100,
 			frames: to
 		}
 	});

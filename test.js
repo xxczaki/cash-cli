@@ -2,7 +2,7 @@ import test from 'ava';
 import execa from 'execa';
 import Conf from 'conf';
 
-const config = new Conf();
+const config = new Conf({projectName: 'cash-cli'});
 
 // Delete an API key, before running tests
 config.clear();

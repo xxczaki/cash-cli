@@ -7,7 +7,7 @@ const ora = require('ora');
 const Conf = require('conf');
 const currencies = require('../lib/currencies.json');
 
-const config = new Conf();
+const config = new Conf({projectName: 'cash-cli'});
 const {got} = cached('cached-response.json');
 
 // API Source

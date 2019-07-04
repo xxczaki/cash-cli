@@ -8,7 +8,7 @@ const chalk = require('chalk');
 const del = require('del');
 const cash = require('./cash.js');
 
-const config = new Conf();
+const config = new Conf({projectName: 'cash-cli'});
 const argv = process.argv.slice(2);
 
 // CLI configuration

@@ -15,12 +15,12 @@
 
 ## Install
 
-via [npm](https://www.npmjs.com/) :package:
+via [npm](https://www.npmjs.com/) :package: ![npm](https://img.shields.io/npm/v/cash-cli.svg)
 ```
 npm install --global cash-cli
 ```
 
-via [homebrew](https://brew.sh/) :beer:
+via [homebrew](https://brew.sh/) :beer: ![homebrew](https://img.shields.io/homebrew/v/cash-cli.svg)
 ```
 brew install cash-cli
 ```

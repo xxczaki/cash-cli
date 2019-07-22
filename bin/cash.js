@@ -1,6 +1,7 @@
 'use strict';
 
-const cached = require('cached-got');
+const mem = require('mem');
+const got = require('got');
 const money = require('money');
 const chalk = require('chalk');
 const ora = require('ora');
@@ -8,7 +9,9 @@ const Conf = require('conf');
 const currencies = require('../lib/currencies.json');
 
 const config = new Conf({projectName: 'cash-cli'});
-const {got} = cached('cached-response.json');
+
+// Cache API response for 10 minutes
+const memGot = mem(got, {maxAge: 600000});
 
 // API Source
 const API = `http://data.fixer.io/api/latest?access_key=${config.get('key')}`;
@@ -30,7 +33,7 @@ const cash = async command => {
 
 	loading.start();
 
-	await got(API, {
+	await memGot(API, {
 		json: true
 	}).then(response => {
 		money.base = response.body.base;

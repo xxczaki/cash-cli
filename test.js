@@ -22,12 +22,12 @@ test('--save', async t => {
 	t.regex(ret.stdout, /Saved default currencies to/);
 });
 
-test('Test --save output without currencies', async t => {
+test('--save without currencies', async t => {
 	const ret = await execa('./bin/index.js', ['--save']);
 	t.regex(ret.stdout, /Saved default currencies to/);
 });
 
-test('Test conversion without API key', async t => {
+test('conversion without API key', async t => {
 	const error = await t.throwsAsync(async () => {
 		await execa('./bin/index.js', ['10', 'foo', 'usd']);
 	});
@@ -35,10 +35,15 @@ test('Test conversion without API key', async t => {
 	t.regex(error.stdout, /Fixer.io API key not found/);
 });
 
-test('Test setting invalid API key', async t => {
+test('invalid API key', async t => {
 	const error = await t.throwsAsync(async () => {
 		await execa('./bin/index.js', ['--key', 'foo']);
 	});
 
 	t.regex(error.stdout, /Provided API key seems invalid/);
+});
+
+test('valid API key', async t => {
+	const ret = await execa('./bin/index.js', ['--key', '11111111111111111111111111111111']);
+	t.regex(ret.stdout, /Saved API key to/);
 });

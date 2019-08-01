@@ -5,7 +5,6 @@
 const Conf = require('conf');
 const meow = require('meow');
 const chalk = require('chalk');
-const del = require('del');
 const cash = require('./cash.js');
 
 const config = new Conf({projectName: 'cash-cli'});
@@ -19,7 +18,6 @@ const cli = meow(`
 	Options
 		--key -k	        Set API key
 		--save -s 			Save default currencies
-		--purge -p 			Purge cached API response to get the latest data
 	Examples
 		$ cash --key [key]
 		$ cash 10 usd eur pln
@@ -29,10 +27,6 @@ const cli = meow(`
 		key: {
 			type: 'string',
 			alias: 'k'
-		},
-		purge: {
-			type: 'boolean',
-			alias: 'p'
 		}
 	}
 });
@@ -72,11 +66,6 @@ if (config.get('key') === undefined) {
 	${chalk.cyan('Then run `cash --key [key]` to save it')}
 \n`);
 	process.exit(1);
-} else if (cli.flags.purge) {
-	del('cached-response.json').then(() => {
-		console.log(chalk.green('Successfully purged cached API data!'));
-		process.exit(0);
-	});
 } else {
 	cash(command);
 }

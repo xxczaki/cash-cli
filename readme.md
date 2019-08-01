@@ -41,7 +41,7 @@ brew install cash-cli
 		$ cash --save usd aud 
 ```
 
-## Available Currencies
+## Available currencies
 
 See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/currencies.json) file.
 
@@ -49,6 +49,10 @@ See [currencies.json](https://github.com/xxczaki/cash-cli/blob/master/lib/curren
 
 - [Money.js](http://openexchangerates.github.io/money.js/) for providing great and simple conversion library.
 - [Fixer.io](http://fixer.io/) for providing awesome currency conversion API.
+
+## Related projects
+
+- [gocash](https://github.com/basebandit/gocash) - Copy of cash-cli, written in golang.
 
 ## License
 

@@ -34,7 +34,6 @@ brew install cash-cli
 	Options
 		--key -k	        Set API key
 		--save -s 			Save default currencies
-		--purge -p 			Purge cached API response to get the latest data
 	Examples
 		$ cash --key [key]
 		$ cash 10 usd eur pln

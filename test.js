@@ -4,7 +4,7 @@ import Conf from 'conf';
 
 const config = new Conf({projectName: 'cash-cli'});
 
-// Delete an API key, before running tests
+// Delete saved configuration, before running tests
 config.clear();
 
 test('--help', async t => {
@@ -27,23 +27,7 @@ test('--save without currencies', async t => {
 	t.regex(ret.stdout, /Saved default currencies to/);
 });
 
-test('conversion without API key', async t => {
-	const error = await t.throwsAsync(async () => {
-		await execa('./bin/index.js', ['10', 'foo', 'usd']);
-	});
-
-	t.regex(error.stdout, /Fixer.io API key not found/);
-});
-
-test('invalid API key', async t => {
-	const error = await t.throwsAsync(async () => {
-		await execa('./bin/index.js', ['--key', 'foo']);
-	});
-
-	t.regex(error.stdout, /Provided API key seems invalid/);
-});
-
-test('valid API key', async t => {
-	const ret = await execa('./bin/index.js', ['--key', '11111111111111111111111111111111']);
-	t.regex(ret.stdout, /Saved API key to/);
+test('conversion', async t => {
+	const ret = await execa('./bin/index.js', ['10', 'usd', 'pln', 'foo']);
+	t.regex(ret.stdout, /Conversion of USD 10/);
 });

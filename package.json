@@ -1,7 +1,7 @@
 {
 	"name": "cash-cli",
-	"version": "3.2.2",
-	"description": "Exchange Currency Rates using your terminal!",
+	"version": "4.0.0",
+	"description": "Convert currency rates directly from your terminal!",
 	"author": {
 		"name": "Antoni Kepinski",
 		"email": "a@kepinski.me",
@@ -48,7 +48,8 @@
 		"mem": "^5.1.1",
 		"meow": "^5.0.0",
 		"money": "^0.2.0",
-		"ora": "^3.4.0"
+		"ora": "^3.4.0",
+		"prompts": "^2.2.1"
 	},
 	"devDependencies": {
 		"ava": "*",

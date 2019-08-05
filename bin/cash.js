@@ -6,15 +6,17 @@ const money = require('money');
 const chalk = require('chalk');
 const ora = require('ora');
 const Conf = require('conf');
-const currencies = require('../lib/currencies.json');
 
 const config = new Conf({projectName: 'cash-cli'});
 
-// Cache API response for 10 minutes
-const memGot = mem(got, {maxAge: 600000});
+// Get a list of available currencies, based on API source
+const currencies = require(`../lib/${config.get('apiName') || 'exchangeRates'}.json`);
+
+// Cache API response for 5 minutes
+const memGot = mem(got, {maxAge: 300000});
 
 // API Source
-const API = `http://data.fixer.io/api/latest?access_key=${config.get('key')}`;
+const API = config.get('apiSource') || 'https://api.exchangeratesapi.io/latest';
 
 const cash = async command => {
 	const {amount} = command;

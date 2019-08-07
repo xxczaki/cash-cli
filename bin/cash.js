@@ -2,7 +2,7 @@
 
 const mem = require('mem');
 const got = require('got');
-const money = require('money');
+const {convert} = require('cashify');
 const chalk = require('chalk');
 const ora = require('ora');
 const Conf = require('conf');
@@ -12,8 +12,8 @@ const config = new Conf({projectName: 'cash-cli'});
 // Get a list of available currencies, based on API source
 const currencies = require(`../lib/${config.get('apiName') || 'exchangeRates'}.json`);
 
-// Cache API response for 5 minutes
-const memGot = mem(got, {maxAge: 300000});
+// Cache API response for 10 minutes
+const memGot = mem(got, {maxAge: 600000});
 
 // API Source
 const API = config.get('apiSource') || 'https://api.exchangeratesapi.io/latest';
@@ -38,12 +38,11 @@ const cash = async command => {
 	await memGot(API, {
 		json: true
 	}).then(response => {
-		money.base = response.body.base;
-		money.rates = response.body.rates;
-
 		to.forEach(item => {
 			if (currencies[item]) {
-				loading.succeed(`${chalk.green(money.convert(amount, {from, to: item}).toFixed(3))} ${`(${item})`} ${currencies[item]}`);
+				const result = convert(amount, {from, to: item, base: response.body.base, rates: response.body.rates}).toFixed(3);
+
+				loading.succeed(`${chalk.green(result)} ${`(${item})`} ${currencies[item]}`);
 			} else {
 				loading.warn(`${chalk.yellow(`The "${item}" currency not found `)}`);
 			}
@@ -54,7 +53,7 @@ const cash = async command => {
 		if (error.code === 'ENOTFOUND') {
 			loading.fail(chalk.red('Please check your internet connection!\n'));
 		} else {
-			loading.fail(chalk.red('Something went wrong :(\n'));
+			loading.fail(chalk.red('Something went wrong :(\n'), error);
 		}
 
 		process.exit(1);

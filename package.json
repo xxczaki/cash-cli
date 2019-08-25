@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "4.0.2",
+	"version": "4.0.3",
 	"description": "Convert currency rates directly from your terminal!",
 	"author": {
 		"name": "Antoni Kepinski",
@@ -42,7 +42,7 @@
 		"cli"
 	],
 	"dependencies": {
-		"cashify": "^1.1.3",
+		"cashify": "^1.2.0",
 		"chalk": "^2.4.2",
 		"conf": "^5.0.0",
 		"got": "^9.6.0",

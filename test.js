@@ -28,6 +28,21 @@ test('--save without currencies', async t => {
 });
 
 test('conversion', async t => {
-	const ret = await execa('./bin/index.js', ['10', 'usd', 'pln', 'foo']);
+	const ret = await execa('./bin/index.js', ['10', 'usd', 'pln', 'chf']);
 	t.regex(ret.stdout, /Conversion of USD 10/);
+});
+
+test('ignores `to` keyword (case insensitive)', async t => {
+	const ret1 = await execa('./bin/index.js', ['10', 'usd', 'to', 'pln']);
+	const ret2 = await execa('./bin/index.js', ['10', 'usd', 'TO', 'pln']);
+	const ret3 = await execa('./bin/index.js', ['10', 'usd', 'tO', 'pln']);
+
+	t.false(/currency not found/.test(ret1.stdout));
+	t.false(/currency not found/.test(ret2.stdout));
+	t.false(/currency not found/.test(ret3.stdout));
+});
+
+test('replaces comma', async t => {
+	const ret = await execa('./bin/index.js', ['10,2', 'usd', 'pln']);
+	t.regex(ret.stdout, /Conversion of USD 10.2/);
 });

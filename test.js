@@ -37,9 +37,9 @@ test('ignores `to` keyword (case insensitive)', async t => {
 	const ret2 = await execa('./bin/index.js', ['10', 'usd', 'TO', 'pln']);
 	const ret3 = await execa('./bin/index.js', ['10', 'usd', 'tO', 'pln']);
 
-	t.false(/currency not found/.test(ret1.stdout));
-	t.false(/currency not found/.test(ret2.stdout));
-	t.false(/currency not found/.test(ret3.stdout));
+	t.notRegex(ret1.stdout, /currency not found/);
+	t.notRegex(ret2.stdout, /currency not found/);
+	t.notRegex(ret3.stdout, /currency not found/);
 });
 
 test('replaces comma', async t => {

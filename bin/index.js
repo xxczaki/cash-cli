@@ -103,7 +103,7 @@ if (cli.flags.api) {
 			process.exit(0);
 		}
 	})();
-} else if (argv.indexOf('--save') !== -1 || argv.indexOf('-s') !== -1) {
+} else if (argv.includes('--save') || argv.includes('-s')) {
 	config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD'));
 	config.set('defaultTo', (argv.length > 2) ? process.argv.slice(4) : config.get('defaultTo', ['USD', 'EUR', 'GBP', 'PLN']));
 	console.log(chalk.green('Saved default currencies to ' + config.path));

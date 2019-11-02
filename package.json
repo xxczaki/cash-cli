@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "4.1.1",
+	"version": "4.1.2",
 	"description": "Convert currency rates directly from your terminal!",
 	"author": {
 		"name": "Antoni Kepinski",

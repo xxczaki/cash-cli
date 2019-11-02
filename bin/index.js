@@ -34,7 +34,7 @@ const cli = meow(`
 
 // Handle amount & currencies
 const command = {
-	amount: Number(argv[0].replace(',', '.')) || 1,
+	amount: !argv[0] ? 1 : Number(argv[0].replace(',', '.')),
 	from: argv[1] || config.get('defaultFrom', 'USD'),
 	to: (argv.length > 2) ? process.argv.slice(4) : config.get('defaultTo', ['USD', 'EUR', 'GBP', 'PLN'])
 };

@@ -1,6 +1,6 @@
 {
 	"name": "cash-cli",
-	"version": "4.1.2",
+	"version": "4.2.0",
 	"description": "Convert currency rates directly from your terminal!",
 	"author": {
 		"name": "Antoni Kepinski",
@@ -20,7 +20,8 @@
 	},
 	"xo": {
 		"rules": {
-			"unicorn/no-process-exit": 0
+			"unicorn/no-process-exit": 0,
+			"import/no-unassigned-import": 0
 		},
 		"esnext": "true"
 	},
@@ -49,11 +50,12 @@
 		"mem": "^5.1.1",
 		"meow": "^5.0.0",
 		"ora": "^4.0.2",
-		"prompts": "^2.2.1"
+		"prompts": "^2.2.1",
+		"v8-compile-cache": "^2.1.0"
 	},
 	"devDependencies": {
 		"ava": "*",
 		"execa": "*",
-		"xo": "^0.25.3"
+		"xo": "*"
 	}
 }

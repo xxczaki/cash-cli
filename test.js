@@ -32,6 +32,11 @@ test('conversion', async t => {
 	t.regex(ret.stdout, /Conversion of USD 10/);
 });
 
+test('without arguments', async t => {
+	const ret = await execa('./bin/index.js');
+	t.regex(ret.stdout, /Conversion of/);
+});
+
 test('ignores `to` keyword (case insensitive)', async t => {
 	const ret1 = await execa('./bin/index.js', ['10', 'usd', 'to', 'pln']);
 	const ret2 = await execa('./bin/index.js', ['10', 'usd', 'TO', 'pln']);

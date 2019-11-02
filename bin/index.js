@@ -2,6 +2,8 @@
 
 'use strict';
 
+require('v8-compile-cache');
+
 const Conf = require('conf');
 const meow = require('meow');
 const chalk = require('chalk');

@@ -1,61 +1,60 @@
 {
-	"name": "cash-cli",
-	"version": "4.2.0",
-	"description": "Convert currency rates directly from your terminal!",
-	"author": {
-		"name": "Antoni Kepinski",
-		"email": "a@kepinski.me",
-		"url": "https://kepinski.me"
-	},
-	"license": "MIT",
-	"repository": "https://github.com/xxczaki/cash-cli",
-	"bugs": {
-		"url": "https://github.com/xxczaki/cash-cli/issues"
-	},
-	"homepage": "https://github.com/xxczaki/cash-cli",
-	"main": "index.js",
-	"scripts": {
-		"postinstall": "node bin/post-install.js",
-		"test": "xo && ava"
-	},
-	"xo": {
-		"rules": {
-			"unicorn/no-process-exit": 0,
-			"import/no-unassigned-import": 0
-		},
-		"esnext": "true"
-	},
-	"bin": {
-		"cash": "./bin/index.js"
-	},
-	"keywords": [
-		"cash-cli",
-		"currency",
-		"exchange",
-		"rates",
-		"convert",
-		"cash",
-		"fixer",
-		"api",
-		"money",
-		"$$$",
-		"currencies",
-		"cli"
-	],
-	"dependencies": {
-		"cashify": "^2.0.1",
-		"chalk": "^2.4.2",
-		"conf": "^6.2.0",
-		"got": "^9.6.0",
-		"mem": "^5.1.1",
-		"meow": "^5.0.0",
-		"ora": "^4.0.2",
-		"prompts": "^2.2.1",
-		"v8-compile-cache": "^2.1.0"
-	},
-	"devDependencies": {
-		"ava": "*",
-		"execa": "*",
-		"xo": "*"
-	}
+    "name": "cash-cli",
+    "version": "4.2.1",
+    "description": "Convert currency rates directly from your terminal!",
+    "author": {
+        "name": "Antoni Kepinski",
+        "email": "a@kepinski.me",
+        "url": "https://kepinski.me"
+    },
+    "license": "MIT",
+    "repository": "https://github.com/xxczaki/cash-cli",
+    "bugs": {
+        "url": "https://github.com/xxczaki/cash-cli/issues"
+    },
+    "homepage": "https://github.com/xxczaki/cash-cli",
+    "main": "index.js",
+    "scripts": {
+        "postinstall": "node bin/post-install.js",
+        "test": "xo && ava"
+    },
+    "xo": {
+        "rules": {
+            "unicorn/no-process-exit": 0,
+            "import/no-unassigned-import": 0
+        },
+        "esnext": "true"
+    },
+    "bin": {
+        "cash": "./bin/index.js"
+    },
+    "keywords": [
+        "cash-cli",
+        "currency",
+        "exchange",
+        "rates",
+        "convert",
+        "cash",
+        "fixer",
+        "api",
+        "money",
+        "$$$",
+        "currencies",
+        "cli"
+    ],
+    "dependencies": {
+        "cashify": "^2.0.2",
+        "chalk": "^3.0.0",
+        "conf": "^6.2.0",
+        "getopts": "^2.2.5",
+        "got": "^9.6.0",
+        "mem": "^6.0.1",
+        "ora": "^4.0.3",
+        "prompts": "^2.3.0"
+    },
+    "devDependencies": {
+        "ava": "*",
+        "execa": "*",
+        "xo": "*"
+    }
 }

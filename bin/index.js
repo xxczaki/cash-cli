@@ -2,10 +2,8 @@
 
 'use strict';
 
-require('v8-compile-cache');
-
 const Conf = require('conf');
-const meow = require('meow');
+const getopts = require('getopts');
 const chalk = require('chalk');
 const prompts = require('prompts');
 const cash = require('./cash.js');
@@ -13,26 +11,38 @@ const cash = require('./cash.js');
 const config = new Conf({projectName: 'cash-cli'});
 const argv = process.argv.slice(2);
 
-// CLI configuration
-const cli = meow(`
-	Usage
-		$ cash <amount> <from> <to>
-		$ cash <options>
-	Options
-		--api -a	        Configure API source
-		--save -s 			Save default currencies
-	Examples
-		$ cash --key
-		$ cash 10 usd eur pln
-		$ cash --save usd aud
-`, {
-	flags: {
-		api: {
-			type: 'boolean',
-			alias: 'a'
-		}
+const options = getopts(argv, {
+	alias: {
+		help: 'h',
+		version: 'v',
+		api: 'a',
+		save: 's',
+		json: 'j'
 	}
 });
+
+if (options.help) {
+	console.log(`
+	Usage: 
+	  $ cash <amount> <from> <to>
+	  $ cash <options>
+	Options:
+	  --api -a	        				 Configure API source
+	  --save -s <from> <to...>			         Save default currencies
+	  -v, --version                                          Print the version
+	  -h, --help                                             Print this help
+	Examples:
+	  $ cash --api
+	  $ cash 10 usd eur pln
+	  $ cash --save usd eur pln chf
+  `);
+	process.exit(0);
+}
+
+if (options.version) {
+	console.log(require('../package.json').version);
+	process.exit(0);
+}
 
 // Handle amount & currencies
 const command = {
@@ -42,7 +52,7 @@ const command = {
 };
 
 // Configure API source
-if (cli.flags.api) {
+if (options.api) {
 	const questions = [
 		{
 			type: 'select',

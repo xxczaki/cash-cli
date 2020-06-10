@@ -44,7 +44,7 @@
     ],
     "dependencies": {
         "cashify": "^2.0.2",
-        "chalk": "^3.0.0",
+        "chalk": "^4.1.0",
         "conf": "^6.2.0",
         "getopts": "^2.2.5",
         "got": "^9.6.0",

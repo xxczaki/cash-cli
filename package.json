@@ -49,7 +49,7 @@
         "getopts": "^2.2.5",
         "got": "^9.6.0",
         "mem": "^6.0.1",
-        "ora": "^4.0.3",
+        "ora": "^5.4.0",
         "prompts": "^2.3.0"
     },
     "devDependencies": {

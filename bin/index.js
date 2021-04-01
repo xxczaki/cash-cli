@@ -59,13 +59,19 @@ if (options.api) {
 			name: 'api',
 			message: 'Choose API source:',
 			choices: [
-				{title: 'Exchange Rates API', description: 'Supports 32 currencies, does not require an API key', value: 'exchangeRates'},
+				{title: 'Exchange Rates API', description: 'Supports 32 currencies, does require an API key', value: 'exchangeRates'},
 				{title: 'Fixer', description: 'Supports 170 currencies, does require an API key (free plan available)', value: 'fixer'},
 				{title: 'Currency Layer', description: 'Supports 168 currencies, does require an API key (free plan available)', value: 'currencyLayer'},
 				{title: 'Open Exchange Rates', description: 'Supports 200+ currencies, does require an API key (free plan available)', value: 'openExchangeRates'}
 			],
 			initial: 0
 		},
+                {
+                        type: prev => prev === 'exchangeRates' ? 'text' : null,
+                        name: 'key',
+                        message: 'Please enter your API Key. You can get it here: https://manage.exchangeratesapi.io/dashboard',
+                        validate: value => /^([a-z0-9]{32})+/i.test(value) === false ? 'API key seems invalid, try again!' : true
+                },
 		{
 			type: prev => prev === 'fixer' ? 'text' : null,
 			name: 'key',
@@ -89,17 +95,12 @@ if (options.api) {
 	(async () => {
 		const response = await prompts(questions);
 
-		if (response.api === 'exchangeRates') {
-			await config.set('apiSource', 'https://api.exchangeratesapi.io/latest');
-			await config.set('apiName', 'exchangeRates');
-
-			console.log(chalk.green('\nDone! Now run `cash --help` to learn how to use this tool.\n'));
-			console.log(chalk.green('Remember, you can always change the API source, by running `cash --api`'));
-			process.exit(0);
-		}
-
-		if (response.api !== 'exchangeRates' && response.key !== undefined) {
-			if (response.api === 'fixer') {
+		if (response.key !== undefined) {
+                        
+			if (response.api === 'exchangeRates') {
+                                await config.set('apiSource', `http://api.exchangeratesapi.io/latest?access_key=${response.key}`);
+                                await config.set('apiName', 'exchangeRates');
+                        } else if (response.api === 'fixer') {
 				await config.set('apiSource', `http://data.fixer.io/api/latest?access_key=${response.key}`);
 				await config.set('apiName', 'fixer');
 			} else if (response.api === 'currencyLayer') {

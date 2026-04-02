@@ -1,0 +1,20 @@
+name: cash
+base: core18
+version: git
+summary: Convert Currency Rates using your terminal!
+description: |
+  Convert Currency Rates using your terminal!
+  
+  Get your API key at https://fixer.io/signup/free
+grade: stable
+confinement: strict
+
+parts:
+  cash:
+    plugin: nodejs
+    source: .
+
+apps:
+  cash:
+    command: cash
+    plugs: [network]
